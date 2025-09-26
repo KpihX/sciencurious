@@ -9,7 +9,7 @@ Chaque article est écrit en **Markdown** avec rendu LaTeX pour les équations, 
 
 ## ✨ Sommaire des Articles
 
-- [🌌 L’Odyssée de l’Intégration](integration.md)
+- [🌌 L’Odyssée de l’Intégration](integration)
   Voyage à travers les grandes théories de l’intégration : de Riemann à Lebesgue, de Lebesgue–Stieltjes à Kurzweil–Henstock, jusqu’aux horizons modernes comme Itô ou Feynman.
 
 ---
@@ -26,8 +26,9 @@ Je suis **K𝛑X**, étudiant en mathématiques appliquées & IA, et passionné 
 
 ## 🔗 Ressources externes
 
-- Mon profil GitHub : [KpihX](https://github.com/KpihX)
-- 📧 Contact : [kapoivha@gmail.com](mailto:kapoivha@gmail.com)
+- 🖥️ Maths Articles : [Mes Articles Mathématiques](https://KpihX.github.io/maths-articles/)
+- 👤 Profil GitHub : [KpihX](https://github.com/KpihX)
+- 📧 Contact : [kapoivha@gmail.com](mailto:kapoivha@gm)
 
 ---
 

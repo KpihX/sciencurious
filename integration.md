@@ -328,6 +328,18 @@ Peut-être que la quête de l'intégrale parfaite est une illusion. Peut-être q
 
 La question reste ouverte. Et c'est peut-être la plus belle conclusion possible à cette odyssée : le voyage n'est jamais vraiment terminé. L'horizon recule à mesure que nous avançons, nous invitant à toujours explorer, questionner, et construire...
 
+---
+
+## 🔗 Ressources externes
+
+- 🖥️ Maths Articles : [Mes Articles Mathématiques](https://KpihX.github.io/maths-articles/)
+- 👤 Profil GitHub : [KpihX](https://github.com/KpihX)
+- 📧 Contact : [kapoivha@gmail.com](mailto:kapoivha@gm)
+
+---
+
+✨ Bonne lecture, et que ces textes suscitent curiosité et exploration !
+
 ## 📚 Pour Aller Plus Loin : Références Bibliographiques
 
 Cette bibliographie combine **ouvrages de référence**, **cours libres d’accès**, et **articles spécialisés** pour explorer en profondeur les théories évoquées dans cette odyssée de l’intégration.

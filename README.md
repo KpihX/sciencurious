@@ -25,8 +25,12 @@ Je suis **K𝛑X**, étudiant en mathématiques appliquées & IA, passionné par
 
 ---
 
-## 🔗 Liens
+## 🔗 Ressources externes
 
 - 🖥️ Maths Articles : [Mes Articles Mathématiques](https://KpihX.github.io/maths-articles/)
 - 👤 Profil GitHub : [KpihX](https://github.com/KpihX)
 - 📧 Contact : [kapoivha@gmail.com](mailto:kapoivha@gm)
+
+---
+
+✨ Bonne lecture, et que ces textes suscitent curiosité et exploration !
