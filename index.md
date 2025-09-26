@@ -9,7 +9,7 @@ Chaque article est écrit en **Markdown** avec rendu LaTeX pour les équations, 
 
 ## ✨ Sommaire des Articles
 
-- [🌌 L’Odyssée de l’Intégration](integration)
+- [🌌 L’Odyssée de l’Intégration](https://KpihX.github.io/maths-articles/integration)
   Voyage à travers les grandes théories de l’intégration : de Riemann à Lebesgue, de Lebesgue–Stieltjes à Kurzweil–Henstock, jusqu’aux horizons modernes comme Itô ou Feynman.
 
 ---
