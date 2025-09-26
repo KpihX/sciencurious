@@ -1,3 +1,8 @@
+---
+layout: default
+title: L'Odyssée de l'Intégration
+---
+
 # 🌌 L'Odyssée de l'Intégration : Au-delà de l'Aire sous la Courbe
 
 ## Prologue : La Quête d'un Outil Parfait

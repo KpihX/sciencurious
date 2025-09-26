@@ -1,0 +1,7 @@
+title: Maths Articles
+description: Articles de mathématiques
+baseurl: "/maths-articles"
+url: "https://kpihx.github.io"
+markdown: kramdown
+kramdown:
+  math_engine: mathjax
