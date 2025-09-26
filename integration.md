@@ -1,6 +1,7 @@
 ---
-layout: default
+layout: math
 title: L'Odyssée de l'Intégration
+math: true
 ---
 
 # 🌌 L'Odyssée de l'Intégration : Au-delà de l'Aire sous la Courbe
