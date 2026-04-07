@@ -1,36 +1,28 @@
-# 📚 Articles Mathématiques – GitHub Pages
+# ScienCurieux
 
-Ce dépôt contient mes articles en **mathématiques appliquées & fondamentales**, publiés au format **Markdown** avec rendu LaTeX via **GitHub Pages**.
+Intuitive visual articles on mathematics, physics, and computer science.
 
----
+**Philosophy:** complex ideas deserve visual clarity. Every article aims to make you *see* the concept, not just read about it. Rigorous but accessible — formulas meet intuition.
 
-## ✨ Contenu du site
+## Live site
 
-Les articles explorent des thèmes allant de l’**analyse classique** aux approches plus modernes et philosophiques :
+**[scien-curieux on GitHub Pages](https://kpihx.github.io/maths-articles/)**
 
-- **🌌 L’Odyssée de l’Intégration**
-  Voyage à travers les grandes théories de l’intégration : Riemann, Lebesgue, Lebesgue–Stieltjes, Kurzweil–Henstock, et ouvertures vers Itô & Feynman.
+## Articles
 
-👉 D’autres articles viendront enrichir progressivement ce site.
+| Article | Domain | Status |
+|---------|--------|--------|
+| [The Integration Odyssey](integration.md) | Mathematics — Analysis | Published |
 
----
+## Author
 
-## 🧭 Auteur
+**KpihX** — Applied Math & CS, Ecole Polytechnique X24.
 
-Je suis **K𝛑X**, étudiant en mathématiques appliquées & IA, passionné par l’exploration des fondements et l’innovation scientifique.
+- GitHub: [KpihX](https://github.com/KpihX)
+- Email: kapoivha@gmail.com
 
-- 🔍 **Objectif** : relier intuition, démonstration et philosophie des sciences.
-- 🧮 **Thématiques** : analyse, probabilités, intégration, théorie de la mesure.
-- ✍️ **Style** : narratif, rigoureux, illustré d’équations et schémas.
+## Stack
 
----
-
-## 🔗 Ressources externes
-
-- 🖥️ Maths Articles : [Mes Articles Mathématiques](https://KpihX.github.io/maths-articles/)
-- 👤 Profil GitHub : [KpihX](https://github.com/KpihX)
-- 📧 Contact : [kapoivha@gmail.com](mailto:kapoivha@gm)
-
----
-
-✨ Bonne lecture, et que ces textes suscitent curiosité et exploration !
+- [Docsify](https://docsify.js.org/) with VS Code dark theme
+- [KaTeX](https://katex.org/) for LaTeX rendering
+- GitHub Pages hosting
