@@ -1,33 +1,64 @@
-# ScienCurieux — Agent Context
+# AGENTS.md — scien_curieux
 
-## Project
+> Project context for all AI agents working in this repository.
+> Loaded automatically by all KpihX agents when present at project root.
+
+## KpihX Mantras
+
+**Exploration:** Problem First → Why before How → Visualization
+**Architecture:** 0 Trust · 100% Control | 0 Magic · 100% Transparency | 0 Hardcoding · 100% Flexibility
+
+## Project Overview
 
 | Field | Value |
 |-------|-------|
-| Name | scien_curieux |
-| Type | GitHub Pages knowledge site (Docsify) |
-| Path | `$HOME/Work/scien_curieux/` |
-| Live URL | `https://kpihx.github.io/maths-articles/` |
-| Remotes | `github` (KpihX/maths-articles) · `gitlab` (kpihx/scien_curieux) |
+| Purpose | Intuitive visual articles on mathematics, physics, and CS |
+| Stack | Docsify + KaTeX + GitHub Pages |
+| Status | 🟢 Active |
+| Live URL | `https://kpihx.github.io/scien_curieux/` |
+| Remotes | `github` (KpihX/scien_curieux) · `gitlab` (kpihx/scien_curieux) |
 
-## Stack
+## Content Layout
 
-- **Docsify** — VS Code dark theme, KaTeX math, darklight toggle, search
-- **KaTeX** — client-side LaTeX rendering (replaces Jekyll kramdown/mathjax)
-- **GitHub Pages** — static hosting from `main` branch root
+```
+scien_curieux/
+├── math/           ← mathematics articles + image assets
+├── cs/             ← computer science articles (future)
+├── physics/        ← physics articles (future)
+├── .agents/        ← this file
+├── index.html      ← Docsify entry (VS Code dark theme + KaTeX)
+├── _sidebar.md     ← navigation
+├── README.md
+├── CHANGELOG.md
+├── TODO.md
+└── Makefile        ← make push
+```
 
-## Content rules
+## Architecture Rules
 
-- Articles are standalone `.md` files at repo root
-- Images go under `image/<ArticleName>/`
-- Math uses `$...$` (inline) and `$$...$$` (display) — KaTeX syntax
-- Every article should maximize visual explanations (diagrams, schemas, animations)
+- **Non-monolithic** — one folder per domain (math/, cs/, physics/); articles are standalone `.md` files within
+- **Flexibility** — articles can embed math ($...$, $$...$$), images, Mermaid diagrams, interactive HTML
+- **Extensibility** — new domain = new folder + sidebar entry; no structural changes needed
+- **No hardcoding** — URLs, paths, and references are relative
+
+## Content Rules
+
+- Articles maximize visual explanations (diagrams, schemas, animations)
+- Math uses KaTeX syntax: `$...$` (inline), `$$...$$` (display)
+- Images per article go under `<domain>/image/<ArticleName>/`
 - Future: integrate code-as-visual (Manim, D3, Mermaid) alongside pixel-gen illustrations
 
-## Key skills
+## Evolution Rules
+
+- New article → update `_sidebar.md`, `README.md`, `CHANGELOG.md`
+- Any significant change → update this `AGENTS.md`
+- **Makefile is the standard task runner** — `make push` for dual-remote sync
+
+## Key Skills
 
 | Skill | When |
 |-------|------|
 | `k-git-pages` | Docsify setup, GitHub Pages config |
 | `k-git` | Push workflow, remote management |
-| `k-pptx` | If generating slide decks from articles |
+| `k-pptx` | Slide deck generation from articles |
+| `k-visual` | Visual content pipeline (Manim, D3, FLUX) — future |

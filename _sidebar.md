@@ -4,7 +4,7 @@
   - [🏠 Welcome](README.md)
 
 - **Mathematics**
-  - [🌌 The Integration Odyssey](integration.md)
+  - [🌌 The Integration Odyssey](math/integration.md)
 
 - **Links**
   - [GitHub](https://github.com/KpihX/maths-articles)
