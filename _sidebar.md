@@ -1,4 +1,4 @@
-- **🔬 ScienCurieux**
+- **🔬 ScienCurious**
 
 - **Home**
   - [🏠 Welcome](README.md)
@@ -7,5 +7,5 @@
   - [🌌 The Integration Odyssey](math/integration.md)
 
 - **Links**
-  - [GitHub](https://github.com/KpihX/scien-curieux)
-  - [GitLab](https://gitlab.com/kpihx/scien-curieux)
+  - [GitHub](https://github.com/KpihX/sciencurious)
+  - [GitLab](https://gitlab.com/kpihx/sciencurious)

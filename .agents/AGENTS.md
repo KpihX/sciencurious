@@ -1,4 +1,4 @@
-# AGENTS.md — scien_curieux
+# AGENTS.md — sciencurious
 
 > Project context for all AI agents working in this repository.
 > Loaded automatically by all KpihX agents when present at project root.
@@ -15,13 +15,13 @@
 | Purpose | Intuitive visual articles on mathematics, physics, and CS |
 | Stack | Docsify + KaTeX + GitHub Pages |
 | Status | 🟢 Active |
-| Live URL | `https://kpihx.github.io/scien-curieux/` |
-| Remotes | `github` (KpihX/scien-curieux) · `gitlab` (kpihx/scien-curieux) |
+| Live URL | `https://kpihx.github.io/sciencurious/` |
+| Remotes | `github` (KpihX/sciencurious) · `gitlab` (kpihx/sciencurious) |
 
 ## Content Layout
 
 ```
-scien_curieux/
+sciencurious/
 ├── math/           ← mathematics articles + image assets
 ├── cs/             ← computer science articles (future)
 ├── physics/        ← physics articles (future)

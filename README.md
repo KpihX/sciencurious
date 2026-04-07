@@ -1,4 +1,4 @@
-# ScienCurieux
+# ScienCurious
 
 Intuitive visual articles on mathematics, physics, and computer science.
 
@@ -6,7 +6,7 @@ Intuitive visual articles on mathematics, physics, and computer science.
 
 ## Live Site
 
-**[ScienCurieux on GitHub Pages](https://kpihx.github.io/scien-curieux/)**
+**[ScienCurious on GitHub Pages](https://kpihx.github.io/sciencurious/)**
 
 ## Articles
 
