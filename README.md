@@ -6,7 +6,7 @@ Intuitive visual articles on mathematics, physics, and computer science.
 
 ## Live Site
 
-**[ScienCurieux on GitHub Pages](https://kpihx.github.io/scien_curieux/)**
+**[ScienCurieux on GitHub Pages](https://kpihx.github.io/scien-curieux/)**
 
 ## Articles
 

@@ -15,8 +15,8 @@
 | Purpose | Intuitive visual articles on mathematics, physics, and CS |
 | Stack | Docsify + KaTeX + GitHub Pages |
 | Status | 🟢 Active |
-| Live URL | `https://kpihx.github.io/scien_curieux/` |
-| Remotes | `github` (KpihX/scien_curieux) · `gitlab` (kpihx/scien_curieux) |
+| Live URL | `https://kpihx.github.io/scien-curieux/` |
+| Remotes | `github` (KpihX/scien-curieux) · `gitlab` (kpihx/scien-curieux) |
 
 ## Content Layout
 

@@ -7,5 +7,5 @@
   - [🌌 The Integration Odyssey](math/integration.md)
 
 - **Links**
-  - [GitHub](https://github.com/KpihX/maths-articles)
-  - [GitLab](https://gitlab.com/kpihx/scien_curieux)
+  - [GitHub](https://github.com/KpihX/scien-curieux)
+  - [GitLab](https://gitlab.com/kpihx/scien-curieux)
