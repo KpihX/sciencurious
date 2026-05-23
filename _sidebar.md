@@ -4,7 +4,7 @@
   - [🏠 Welcome](README.md)
 
 - **Mathematics**
-  - [🌌 The Integration Odyssey](math/integration.md)
+  - [🌌 The Integration Odyssey](math/integration/integration.md)
 
 - **AI**
   - [🧪 Multilingual Token Consumption](ai/multilingual-token-consumption/article.md)

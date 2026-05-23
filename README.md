@@ -14,7 +14,7 @@ Intuitive visual articles on mathematics, physics, and computer science.
 
 | Article | Topic | Status |
 |---------|-------|--------|
-| [The Integration Odyssey](math/integration.md) | Riemann → Lebesgue → K-H → Ito → Feynman | Published |
+| [The Integration Odyssey](math/integration/integration.md) | Riemann → Lebesgue → K-H → Ito → Feynman | Published |
 
 ### Computer Science
 
