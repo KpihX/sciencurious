@@ -20,6 +20,12 @@ Intuitive visual articles on mathematics, physics, and computer science.
 
 *Coming soon — Transformers, algorithms, systems.*
 
+### AI
+
+| Article | Topic | Status |
+|---------|-------|--------|
+| [Multilingual Token Consumption](ai/multilingual-token-consumption/article.md) | Scientific comparison of tokenization behavior across languages and prompt modes | Published |
+
 ### Physics
 
 *Coming soon — relativity, quantum, thermodynamics.*
