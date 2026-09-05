@@ -10,13 +10,23 @@
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/style.min.css" title="docsify-darklight-theme" type="text/css" />
   <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css" />
   <style>
-    /* Brand banner as page background (subtle, both themes) */
+    /* Brand banner as page background (uniform dark + light) */
     body::before {
       content: '';
       position: fixed;
       inset: 0;
       background: url('assets/sciencurious_banner.png') center / cover no-repeat;
-      opacity: 0.14;
+      opacity: 0.4;
+      pointer-events: none;
+      z-index: 0;
+    }
+    /* Theme veil above the banner, below content: same tint both themes */
+    body::after {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: var(--background);
+      opacity: 0.7;
       pointer-events: none;
       z-index: 0;
     }
@@ -26,9 +36,9 @@
     }
     /* Main logo in sidebar */
     .app-name-link img {
-      max-height: 88px;
-      max-width: 80%;
-      border-radius: 12px;
+      max-height: 150px;
+      width: 85%;
+      border-radius: 14px;
     }
     .sidebar {
       display: flex !important;
