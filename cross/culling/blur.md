@@ -175,4 +175,4 @@ What if we could detect bokeh versus a missed subject not by a hard threshold, b
 *(Above: Left, a wheelie the camera followed. Right, a subject that missed focus. The climb keeps the level where $ S $ peaks, measuring the solidity of the structure rather than relying on a single arbitrary cut).*
 
 The photographer looks at the screen, sees the ellipses, understands the machine's reasoning instantly, and clicks Keep or Reject. 
-That is true **Assisted Culling**.
+That is the core philosophy of this pipeline: a signal, not a verdict.
