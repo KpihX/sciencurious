@@ -501,7 +501,3 @@ This is why ResNets with identity shortcuts train successfully at **100+ layers*
 
 4. **S. R. Rath.** *"Residual Neural Networks — ResNets: Paper Explanation."* DebuggerCafe, 2021.
     - [debuggercafe.com](https://debuggercafe.com/residual-neural-networks-resnets-paper-explanation/)
-
----
-
-**Navigate:** ⬅ [🌌 Integration Odyssey](../../math/integration/integration.md) · [🏠 Home](../../README.md) · [RegNet sequel ➡](../regnet/regnet.md)

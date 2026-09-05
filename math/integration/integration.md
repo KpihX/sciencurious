@@ -402,7 +402,3 @@ Cette bibliographie combine **ouvrages de référence**, **cours libres d’acc�
 
 - *The Feynman Integral as a Henstock Integral* (survey + problèmes ouverts)🔗 [arXiv](https://arxiv.org/abs/2002.12691)
 - *Scattering using real-time path integrals* (Phys. Rev. C)🔗 [APS Journal](https://link.aps.org/doi/10.1103/PhysRevC.101.064001)
-
----
-
-**Navigation :** [🏠 Accueil](../../README.md) · [ResNet : la suite ➡](../../ai/resnet/resnet.md)

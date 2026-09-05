@@ -446,7 +446,3 @@ Despite its speed and performance, RegNet (like all CNNs) possesses distinct lim
 
 4. **A. Zhang, Z. C. Lipton, M. Li, A. J. Smola.** *"Dive into Deep Learning" (D2L), Chapter 7.6: Training Recipes.*
     - [d2l.ai](https://d2l.ai/chapter_convolutional-modern/training-recipes.html)
-
----
-
-**Navigate:** ⬅ [ResNet](../resnet/resnet.md) · [🏠 Home](../../README.md)
