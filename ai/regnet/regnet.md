@@ -6,7 +6,7 @@
 > 👤 Author: KπX × Explore agent
 > 📚 Based on the original papers (see [References](#references))
 
-> 🔗 **Prequel:** [ResNet — Deep Residual Learning](../resnet/resnet.md) — no RegNet without the residual bottleneck.
+> 🔗 **Prequel:** [ResNet — Deep Residual Learning](ai/resnet/resnet.md) — no RegNet without the residual bottleneck.
 
 ---
 

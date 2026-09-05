@@ -4,7 +4,7 @@
 >
 > 📅 Date: 2025-09-26
 > 👤 Auteur: KpihX
-> 🎬 Vidéo: [integration.mp4](assets/integration.mp4) · 🛠️ Build: `make integration` (`scripts/`)
+> 🎬 Vidéo: [integration.mp4](math/integration/assets/integration.mp4) · 🛠️ Build: `make integration` (`scripts/`)
 
 ---
 

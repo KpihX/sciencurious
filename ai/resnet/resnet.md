@@ -6,7 +6,7 @@
 > 👤 Author: KπX × Explore agent
 > 📚 Based on the original papers (see [References](#references))
 
-> 🔗 **Sequel:** [RegNet — Designing Network Design Spaces](../regnet/regnet.md) — from the residual block to the design space.
+> 🔗 **Sequel:** [RegNet — Designing Network Design Spaces](ai/regnet/regnet.md) — from the residual block to the design space.
 
 ---
 
