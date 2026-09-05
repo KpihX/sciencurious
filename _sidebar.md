@@ -7,7 +7,8 @@
   - [🌌 The Integration Odyssey](math/integration/integration.md)
 
 - **AI**
-  - [🧪 Multilingual Token Consumption](ai/multilingual-token-consumption/article.md)
+  - [🧬 ResNet: Deep Residual Learning](ai/resnet/resnet.md)
+  - [🧬 RegNet: Designing Network Design Spaces](ai/regnet/regnet.md)
 
 - **Links**
   - [GitHub](https://github.com/KpihX/sciencurious)

@@ -1,23 +1,18 @@
 [project]
 name = "sciencurious"
 version = "0.1.0"
-description = "Scientific notebooks and visual articles for ScienCurious."
+description = "Visual scientific articles for ScienCurious Lab — Manim animations, math, and more."
 readme = "README.md"
 authors = [
     { name = "Ivann KAMDEM", email = "kapoivha@gmail.com" }
 ]
 requires-python = ">=3.12"
 dependencies = [
+    "edge-tts>=7.2.8",
     "jupyter>=1.1.1",
+    "manim>=0.21.0",
     "matplotlib>=3.10.8",
     "numpy>=2.4.4",
     "scipy>=1.17.1",
     "tiktoken>=0.12.0",
 ]
-
-[project.scripts]
-sciencurious = "sciencurious:main"
-
-[build-system]
-requires = ["uv_build>=0.10.3,<0.11.0"]
-build-backend = "uv_build"

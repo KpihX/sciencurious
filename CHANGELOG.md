@@ -2,6 +2,16 @@
 
 ## [Unreleased]
 
+### Added
+- New AI articles: `ai/resnet/resnet.md` (ResNet, clean-path proof) + `ai/regnet/regnet.md` (RegNetY design spaces, recipes) with cross-links (prequel/sequel) and footer navigation on all 3 articles
+- Per-article `assets/` folders (`ai/regnet/assets/cosine_warmup.png`); root `assets/` brand hub (logo-nobg as logo, banner as page background)
+- Uniform article skeleton: header blockquote, TOC, numbered sections, footer nav
+
+### Changed
+- `math/integration/`: reorg to `scripts/` + `assets/` (semantic names, `_odyssey` dropped); header blockquote + TOC + numbered sections added, content unchanged
+- Sidebar: AI section lists ResNet + RegNet (removed dead `multilingual-token-consumption` link — file absent)
+- `index.html`: logo + banner background theming
+
 ### Changed
 - Migrated from Jekyll (kramdown/mathjax) to Docsify (VS Code dark theme + KaTeX)
 - Reorganized repo with KpihX project standard (.agents/, Makefile, CHANGELOG, TODO)

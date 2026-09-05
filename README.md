@@ -24,7 +24,8 @@ Intuitive visual articles on mathematics, physics, and computer science.
 
 | Article | Topic | Status |
 |---------|-------|--------|
-| [Multilingual Token Consumption](ai/multilingual-token-consumption/article.md) | Scientific comparison of tokenization behavior across languages and prompt modes | Published |
+| [ResNet: Deep Residual Learning](ai/resnet/resnet.md) | Degradation → residual → clean-path proof | Published |
+| [RegNet: Designing Network Design Spaces](ai/regnet/regnet.md) | Design spaces, quantized widths, group conv, SE, recipes | Published |
 
 ### Physics
 

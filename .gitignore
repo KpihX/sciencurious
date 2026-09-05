@@ -1,0 +1,3 @@
+# Local ignores — ONLY volatile runtimes. NEVER assets/ (figures, videos, brand).
+.venv/
+__pycache__/

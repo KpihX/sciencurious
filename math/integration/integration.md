@@ -1,10 +1,30 @@
 # 🌌 L'Odyssée de l'Intégration : Au-delà de l'Aire sous la Courbe
 
-## Prologue : La Quête d'un Outil Parfait
+> 🧠 **Une odyssée visuelle de l'intégration** — de Riemann à Lebesgue, Stieltjes et Kurzweil-Henstock, jusqu'aux frontières (Itô, Stokes, Feynman).
+>
+> 📅 Date: 2025-09-26
+> 👤 Auteur: KpihX
+> 🎬 Vidéo: [integration.mp4](assets/integration.mp4) · 🛠️ Build: `make integration` (`scripts/`)
+
+---
+
+## 📋 Table des Matières
+
+1. [Prologue : la quête d'un outil parfait](#prologue)
+2. [1. Les piliers classiques et leurs fissures](#piliers)
+3. [2. Première voie — la flexibilité de la mesure](#stieltjes)
+4. [3. Seconde voie — le triomphe subtil de Riemann](#kh)
+5. [4. La confrontation des titans](#confrontation)
+6. [5. Au-delà de l'horizon](#frontieres)
+7. [Épilogue : la quête inachevée](#epilogue)
+8. [Ressources externes](#ressources)
+9. [Références bibliographiques](#references)
+
+## Prologue : La Quête d'un Outil Parfait <span id="prologue"></span>
 
 Toute personne ayant touché aux mathématiques connaît l'intégrale. Dans sa forme la plus pure, celle imaginée par **Bernhard Riemann**, c'est une idée d'une beauté et d'une intuition saisissantes : l'aire sous une courbe. On la visualise, on la "sent". On découpe la base en une myriade de rectangles infiniment fins, on somme leurs aires, et la magie opère. 📏
 
-![1758841641593](images/1758841641593.png)
+![Rectangles de Riemann](assets/riemann_rectangles.png)
 
 Pourtant, cet outil si élégant, si fondamental, est aussi fragile. Face à des fonctions trop "sauvages", trop discontinues, l'édifice de Riemann s'effondre. Les sommes n'arrivent plus à se mettre d'accord, et le concept d'aire perd son sens. Illustrons concrètement cette défaillance avec un célèbre "monstre" mathématique : la **fonction de Dirichlet**, définie sur l'intervalle $[0,1]$. Son comportement est le chaos incarné :
 
@@ -18,7 +38,7 @@ $$
 
 Imaginez un peigne aux dents infiniment denses. Entre deux dents (deux nombres rationnels), il y a toujours une infinité de "trous" (des irrationnels), et entre deux trous, une infinité de dents. C'est l'image de cette fonction.
 
-![1758841698549](images/1758841698549.png)
+![Peigne de Dirichlet](assets/dirichlet_comb.png)
 
 Pourquoi l'intégrale de Riemann reste-t-elle indécise face à elle ? Rappelons que Riemann nous demande de découper l'intervalle $[0,1]$ en petits segments et, sur chacun, de choisir un point pour dessiner un rectangle.
 
@@ -31,7 +51,7 @@ Ce voyage nous mènera à déconstruire notre intuition, à "atterrir" dans des 
 
 ---
 
-## Chapitre I : Les Piliers Classiques et Leurs Fissures 🏛️
+## 🏛️ 1. Les Piliers Classiques et Leurs Fissures <span id="piliers"></span>
 
 ### L'Édifice de Lebesgue : Mesurer l'Espace avec une Nouvelle Perspective
 
@@ -55,7 +75,7 @@ $$
 \text{Aire} \approx \sum_j \underbrace{y_j}_{\text{hauteur fixe}} \cdot \underbrace{\mu\{x \mid f(x) \approx y_j\}}_{\text{largeur variable}}
 $$
 
-![1758842768297](images/1758842768297.png)
+![Riemann vs Lebesgue](assets/riemann_vs_lebesgue.png)
 
 ---
 
@@ -100,7 +120,7 @@ $$
 f(x) = \frac{\sin(x)}{x}
 $$
 
-![1758842825147](images/1758842825147.png)
+![Sinus cardinal](assets/sinc_cardinal.png)
 
 L'intégrale impropre au sens de Riemann
 
@@ -124,7 +144,7 @@ Cette intégrale **diverge**. Les arches, bien que de plus en plus petites, ne s
 
 Cette fissure nous a ouvert deux voies d'exploration pour aller plus loin.
 
-## Chapitre II : Première Voie - La Flexibilité de la Mesure (Lebesgue-Stieltjes) 🎲
+## 🎲 2. Première Voie - La Flexibilité de la Mesure (Lebesgue-Stieltjes) <span id="stieltjes"></span>
 
 La première voie pour généraliser Lebesgue consiste à ne pas changer la méthode, mais à changer l'outil de mesure lui-même.
 
@@ -156,11 +176,11 @@ La magie opère ici :
 - Si $X$ est continue, $F(x)$ est une courbe lisse, et l’on peut montrer que $\mathrm{d}F(x)$ devient $p(x)\,dx$ (où $p$ est la densité de probabilité) : on retrouve une intégrale de Lebesgue classique.
 - Si $X$ est discrète, $F(x)$ est une fonction en escalier. L'intégrale $\mathrm{d}F(x)$ "détecte" les sauts de l'escalier, et l'intégrale se transforme automatiquement en une somme pondérée par la hauteur des sauts, qui sont précisément les probabilités $\mathbb{P}(X=x_i)$ !
 
-![1758842881199](images/1758842881199.png)
+![Fonction de répartition discrète et continue](assets/cdf_stieltjes.png)
 
 Toutefois cette intégrale est en essence, un cas particulier de la théorie plus générale de Lebesgue où l'on choisit une mesure $\mu$ qui n'est pas forcément la mesure de longueur standard (mesure Lebesgue classique). Dans cette vision plus générale, on s'autorise à prendre d'autre mesure comme celle de comptage dans le cas discret, percevant ainsi une somme comme une intégrale. L-S est ainsi le cas où cette mesure peut être construite à partir d'une fonction $g$. Ces mesures "constructibles" sont des exemples de mesures de Radon (ou mesures "gentilles"), qui sont bien comportées : finies sur les compacts et régulières.
 
-## Chapitre III : Seconde Voie - Le Triomphe Subtil de Riemann (Kurzweil-Henstock) 🏆
+## 🏆 3. Seconde Voie - Le Triomphe Subtil de Riemann (Kurzweil-Henstock) <span id="kh"></span>
 
 La seconde voie est plus radicale et d'une subtilité folle. Elle ne part pas de Lebesgue, mais revient à la définition originelle de Riemann pour la réparer avec une modification minuscule aux conséquences gigantesques.
 
@@ -170,7 +190,7 @@ La seconde voie est plus radicale et d'une subtilité folle. Elle ne part pas de
 
 Le défaut de Riemann était sa subdivision uniforme : la largeur de tous les rectangles devait être inférieure à un même $\delta$. Jaroslav Kurzweil et Ralph Henstock introduisent la jauge : une fonction $\delta(x)>0$ qui prescrit une tolérance **locale**, adaptée à chaque point $x$.
 
-![1758843050947](images/1758843050947.png)
+![Jauge de Kurzweil-Henstock](assets/gauge_jauge.png)
 
 Près d'un point "difficile" où la fonction oscille beaucoup, on exige des rectangles très fins (on choisit un petit $\delta(x)$). Là où la fonction est sage et plate, on peut se permettre des rectangles larges (un grand $\delta(x)$).
 
@@ -233,7 +253,7 @@ C'est peut-être son plus grand succès. Pour K-H, le théorème est d'une puret
 
 Ce théorème s'applique même à des fonctions pathologiques comme la **dérivée de Volterra**. On peut construire une fonction $F(x)$ dérivable partout, dont la dérivée $f(x)=F'(x)$ est bornée mais n'est **ni Riemann-intégrable, ni Lebesgue-intégrable**. Une telle fonction peut être construite sur un **ensemble de Cantor "gras"** (un ensemble de type Cantor mais de mesure non nulle). Seule K-H redonne son plein pouvoir au lien entre dérivation et intégration.
 
-![1758843122051](images/1758843122051.png)
+![Ensemble de Cantor gras](assets/cantor_gras.png)
 
 #### ⚠️ Mais alors ...
 
@@ -250,7 +270,7 @@ On perd alors toute l’architecture fonctionnelle qui fait la force de Lebesgue
 K-H brille par sa souplesse pour rétablir le lien **dérivée–intégrale**, mais il ne fournit pas l’édifice fonctionnel et probabiliste bâti sur la complétude.
 C’est là que l’intégrale de Lebesgue reprend l’avantage et devient l’outil incontournable.
 
-## Chapitre IV : La Confrontation des Titans - Feuille de Route pour le Praticien 🧭
+## 🧭 4. La Confrontation des Titans - Feuille de Route pour le Praticien <span id="confrontation"></span>
 
 Face à ces théories, une question pragmatique se pose : quand utiliser quoi ?
 
@@ -293,20 +313,20 @@ Conclusion : La relation entre les ensembles de fonctions intégrables n'est pas
 | L'analyse fonctionnelle, les EDP, la théorie des espaces de Hilbert. | Lebesgue                                | Sa complétude (espaces de Banach$L^p$) est non négociable. C'est le langage standard de la recherche.                     |
 | La théorie des probabilités, la statistique, la finance.            | Lebesgue-Stieltjes                      | Il unifie les mondes discret et continu de façon élégante via la fonction de répartition.                                 |
 
-## Chapitre V : Au-delà de l'Horizon - Les Nouvelles Frontières 🚀
+## 🚀 5. Au-delà de l'Horizon - Les Nouvelles Frontières <span id="frontieres"></span>
 
 Notre odyssée ne s'arrête pas là. Les mathématiques et la physique ont eu besoin d'outils encore plus spécialisés.
 
 - **L'Intégration Stochastique (Itô)** : pour intégrer le long des chemins aléatoires et non-différentiables du **mouvement Brownien**. Indispensable en finance, elle obéit à ses propres règles (Lemme d'Itô), où $({\rm d}W_t)^2 \neq 0$ !
 
-  ![1758843188181](images/1758843188181.png)
+  ![Mouvement brownien d'Itô](assets/ito_brownien.png)
 - **L'Intégration Géométrique** : pour intégrer des **formes différentielles** sur des variétés courbes (sphères, tores...). Elle culmine avec le magnifique **Théorème de Stokes généralisé**, unifiant tous les grands théorèmes de l'analyse vectorielle.
 
-  ![1758843224310](images/1758843224310.png)
+  ![Théorème de Stokes sur variétés](assets/stokes_varietes.png)
 - **L'Intégrale de Chemin de Feynman** : l'idée audacieuse et encore non formalisée rigoureusement de la physique quantique, qui consiste à "sommer" sur l'espace de toutes les histoires possibles d'une particule.
 - **L'Intégrale de Haar** : pour définir une "moyenne" invariante sur des groupes topologiques abstraits, socle de l'analyse harmonique moderne.
 
-## Épilogue : La Quête Inachevée et la Sagesse de l'Imperfection 🤔
+## Épilogue : La Quête Inachevée et la Sagesse de l'Imperfection 🤔 <span id="epilogue"></span>
 
 Notre voyage nous a montré qu'il n'existe pas une théorie de l'intégration unique et parfaite. Chaque outil est un compromis, une réponse adaptée à un certain type de question. Mais cela soulève une interrogation plus profonde, d'ordre méta-mathématique.
 
@@ -330,7 +350,7 @@ La question reste ouverte. Et c'est peut-être la plus belle conclusion possible
 
 ---
 
-## 🔗 Ressources externes
+## 🔗 Ressources externes <span id="ressources"></span>
 
 - 🖥️ Maths Articles : [Mes Articles Mathématiques](https://KpihX.github.io/maths-articles/)
 - 👤 Profil GitHub : [KpihX](https://github.com/KpihX)
@@ -340,7 +360,7 @@ La question reste ouverte. Et c'est peut-être la plus belle conclusion possible
 
 ✨ Bonne lecture, et que ces textes suscitent curiosité et exploration !
 
-## 📚 Pour Aller Plus Loin : Références Bibliographiques
+## 📚 Pour Aller Plus Loin : Références Bibliographiques <span id="references"></span>
 
 Cette bibliographie combine **ouvrages de référence**, **cours libres d’accès**, et **articles spécialisés** pour explorer en profondeur les théories évoquées dans cette odyssée de l’intégration.
 
@@ -382,3 +402,7 @@ Cette bibliographie combine **ouvrages de référence**, **cours libres d’acc�
 
 - *The Feynman Integral as a Henstock Integral* (survey + problèmes ouverts)🔗 [arXiv](https://arxiv.org/abs/2002.12691)
 - *Scattering using real-time path integrals* (Phys. Rev. C)🔗 [APS Journal](https://link.aps.org/doi/10.1103/PhysRevC.101.064001)
+
+---
+
+**Navigation :** [🏠 Accueil](../../README.md) · [ResNet : la suite ➡](../../ai/resnet/resnet.md)

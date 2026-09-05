@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 import os
 import sys
+import shutil
 import subprocess
 import json
 
@@ -35,8 +36,9 @@ ACTS = {
     )
 }
 
-# The absolute path to edge-tts from pyenv 3.12.12
-EDGE_TTS_PATH = "/home/kpihx/.pyenv/versions/3.12.12/bin/edge-tts"
+# edge-tts resolved from PATH (uv project env provides it — `uv add edge-tts`).
+# Override with EDGE_TTS_PATH env var if a specific binary is needed.
+EDGE_TTS_PATH = os.environ.get("EDGE_TTS_PATH") or shutil.which("edge-tts") or "edge-tts"
 
 def get_audio_duration(file_path):
     cmd = [
@@ -104,19 +106,19 @@ def main():
     # Use -qh for high quality, --media_dir .tmp_media to avoid pollution
     cmd_manim = [
         "manim", "-qh", "--media_dir", ".tmp_media",
-        "integration_odyssey.py", "RiemannVsLebesgue"
+        "scene.py", "RiemannVsLebesgue"
     ]
     subprocess.run(cmd_manim, check=True)
     
     # Path of generated video
-    manim_video = ".tmp_media/videos/integration_odyssey/1080p60/RiemannVsLebesgue.mp4"
+    manim_video = ".tmp_media/videos/scene/1080p60/RiemannVsLebesgue.mp4"
     if not os.path.exists(manim_video):
         print(f"Error: manim video not found at {manim_video}", file=sys.stderr)
         sys.exit(1)
     
     # Stitch video and audio
     print("--> 5. Stitching video and narration with ffmpeg...")
-    final_output = "integration_odyssey.mp4"
+    final_output = "../assets/integration.mp4"
     cmd_stitch = [
         "ffmpeg", "-y", "-i", manim_video, "-i", "narration.mp3",
         "-c:v", "copy", "-c:a", "aac", "-b:a", "192k",
