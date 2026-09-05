@@ -31,6 +31,6 @@ How each part decides once measured:
 
 ![Eye Decision](assets/eye_decision.png)
 
-![Blur Rule](assets/blur_rule.png)
+![Final Pipeline: Two Models, One Question](assets/final_pipeline.png)
 
 One photograph in, a readable verdict out — and nothing thrown away on an abstention.

@@ -219,7 +219,7 @@ The result is a dense, continuous map of the focal plane, drawn directly over th
 
 What if we could detect bokeh versus a missed subject not by a hard threshold, but by the way the subject is integrated?
 
-<video width="100%" controls>
+<video width="100%" controls preload="metadata" playsinline poster="cross/culling/assets/a23_poster.jpg">
   <source src="cross/culling/assets/a23_pair.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
