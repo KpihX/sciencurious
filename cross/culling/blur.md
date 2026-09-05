@@ -27,9 +27,8 @@ Unlike eye status, which has a discrete, nameable answer, blur does not. A photo
 
 We start by extracting the maximum amount of signal using classic image processing. 
 
-### Why Grayscale and Log-Luminance?
-Every kernel in this section evaluates the derivative of intensity. Two hues of equal luminance return the same derivative, making the kernels blind to color by construction (color repeatedly failed in this project as a blur cue). 
-Furthermore, we work on the log-luminance frame. Because the gradient of $ \log I $ is $ \frac{\nabla I}{I} $, it is invariant to exposure (Weber's Law). A dark night scene should not be penalized as "textureless" simply because it is dark. We measure where light is fair, and decide where noise is fair.
+### Why Grayscale?
+Every kernel in this section evaluates the derivative of intensity. Two hues of equal luminance return the same derivative, making the kernels blind to color by construction (color repeatedly failed in this project as a blur cue).
 
 ![Classical Kernels](assets/blur_01_kernels.png)
 
@@ -69,17 +68,19 @@ Two magnitudes and one axis. The classical bank carries a real signal.
 
 Since the classical bank carries a strong signal, the next obvious step is to feed it to a classifier to separate the five classes (`sharp`, `global_motion`, `global_defocus`, `local_motion`, and `bokeh`).
 
-But here lies a devastating trap. If we combine only two datasets (e.g., Kwentar, which has global states, and CUHK, which has local states), the classifier sees two disjoint blocks. `local_motion` means CUHK and `global_defocus` means Kwentar. The class and the archive become the exact same fact. 
+But here lies a devastating trap. If we combine only two datasets (e.g., Kwentar, which has global states, and CUHK, which has local states), the classifier sees two disjoint blocks. `local_motion` means CUHK and `global_defocus` means Kwentar. The class and the archive become the exact same fact.
+
+![The 2 Initial Datasets](assets/blur_06_corpus.png)
 
 A lazy model will just learn the dataset signature — the sensor noise, the resolution, the color rendering, the typical framing of that archive — without learning anything about blur. You cannot solve a dataset problem with an architecture.
 
 ### 8 Archives and Contingency
 
-We had to aggressively audit and curate 8 different archives (DPDD, RealBlur, RealBokeh, OMoBlur, BID, Wikimedia Commons harvests) to ensure no single source dominated, achieving a matrix of 4,728 rows with at least three sources per class. 
+We had to aggressively audit and curate 8 different archives (DPDD, RealBlur, RealBokeh, OMoBlur, BID, Wikimedia Commons harvests) to ensure no single source dominated, achieving a matrix of 4,728 rows with at least three sources per class.
 
-![Dataset Sources](assets/blur_07_sources.png)
+![Nine Archives Contingency](assets/dataset_contingency.png)
 
-But even with 8 archives, if you look at the contingency table (the dashed lines on the right), most sources do not contain most classes. A defocus dataset has no camera shake; a blur-detection archive has no sharp control. 
+Read the dashes rather than the numbers: most sources do not contain most classes, and it is not an oversight. On the left, one frozen frame per source — nobody would confuse a Kwentar tripod phone shot with a CUHK street frame. Each protocol leaves its signature all over the pixels: noise, resolution, lighting, framing. But even with 8 archives, if you look at the contingency table, most sources do not contain most classes. A defocus dataset has no camera shake; a blur-detection archive has no sharp control. 
 
 ### The Cheater Model
 
