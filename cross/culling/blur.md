@@ -1,6 +1,6 @@
 # 🌫️ Blur: From Scalar Scores to Spatial Fields
 
-> 🧠 **Making blur inspectable** — why global scalar metrics fail to distinguish bokeh from motion, the architecture of the CNN judge, and how modeling blur as a continuous vector field bridges the gap between deep learning and physics.
+> 🧠 **Making blur inspectable** — why global scalar metrics fail to distinguish bokeh from motion, the dataset trap of CNNs, and how modeling blur as a continuous vector field bridges the gap between deep learning and physics.
 >
 > 📅 Date: 2026-09-05
 > 👤 Author: KpihX
@@ -12,116 +12,89 @@
 
 ## 📋 Table of Contents
 
-1. [The Preoccupation: The Subjectivity of Blur](#-1-the-preoccupation-the-subjectivity-of-blur)
-2. [Phase I: The Classical Bank (Global Scalars)](#-2-phase-i-the-classical-bank-global-scalars)
-3. [Phase II: The CNN Classifier (And Its Data Trap)](#-3-phase-ii-the-cnn-classifier-and-its-data-trap)
-4. [Phase III: The Window Vector Field (Physical Interpretation)](#-4-phase-iii-the-window-vector-field-physical-interpretation)
-5. [The Final Decision: Subject vs Background](#-5-the-final-decision-subject-vs-background)
+1. [The Preoccupation: Is this picture sharp?](#-1-the-preoccupation-is-this-picture-sharp)
+2. [The Classical Bank (Global Scalars)](#-2-the-classical-bank-global-scalars)
+3. [The Learned Approach & The Corpus Trap](#-3-the-learned-approach--the-corpus-trap)
+4. [The Window-Based Approach (Fields)](#-4-the-window-based-approach-fields)
+5. [The Fusion Judge](#-5-the-fusion-judge)
 6. [References](#references)
 
 ---
 
-## 🧩 1. The Preoccupation: The Subjectivity of Blur <span id="preoccupation"></span>
+## 🧩 1. The Preoccupation: Is this picture sharp? <span id="preoccupation"></span>
 
-A closed eye is an objective defect. Blur is not. 
-Blur is highly subjective and deeply tied to artistic intent. 
-
-There are multiple types of blur:
-- **Global Motion Blur:** The camera shook. (Reject).
-- **Global Defocus:** The camera missed the focal plane entirely. (Reject).
-- **Local Motion:** The subject moved rapidly while the background remained sharp. (Reject, usually).
-- **Bokeh (Local Defocus):** The subject is in sharp focus, but a shallow depth of field intentionally blurs the background. (Keep! This is often the desired aesthetic).
-
-If an algorithm simply outputs a scalar value like "0.82 Blurry", it is fundamentally useless to a photographer. Did it detect camera shake, or did it detect the beautiful bokeh? We must move from an abstract score to a spatial map.
+Unlike eye status, which has a discrete, nameable answer, blur does not. 
+A photograph can have global motion blur, global defocus, local motion (subject moving), or bokeh (background defocus). A culling system must distinguish a ruined photo from artistic intent. 
 
 ---
 
-## 📉 2. Phase I: The Classical Bank (Global Scalars) <span id="classical"></span>
+## 📉 2. The Classical Bank (Global Scalars) <span id="classical"></span>
 
-Before training neural networks, we must extract the maximum amount of signal using classic image processing. We run the log-luminance frame through three deterministic operators:
+We start by running the log-luminance frame through classical operators to see what they can separate.
 
-### 1. Variance of the Laplacian
-The Laplacian operator (the trace of the Hessian matrix) acts as a 2nd-order derivative, highlighting regions of rapid intensity change (edges). 
-By computing the variance of the Laplacian across the image, we get a measure of high-frequency energy. A sharp image has many crisp edges (high variance). A blurry image is flat (low variance).
+![Structure Tensor Math](assets/tensor_math.png)
 
-### 2. The Structure Tensor & Coherence
-To separate *motion* blur from *defocus* blur, we need directionality. We compute the image gradients $ g = [\nabla_x, \nabla_y]^T $. 
-The Structure Tensor $ T $ is defined as the outer product of the gradients averaged over a neighborhood:
+1. **Laplacian Variance and Tenengrad:** Both fall by a factor of 25 from sharp to motion to defocus. They answer the question *"how much?"* perfectly.
+2. **The Structure Tensor ($ T $):** The gradient $ g = [G_x, G_y]^T $. The tensor is $ T = \overline{g g^T} $. The eigenvalues $ \lambda_1, \lambda_2 $ are not proxies for directional energies; they *are* them.
+3. **Coherence ($ \rho $):** The normalized difference of the two eigenvalues. Zero for a disc (defocus or sharp). One for a smear (motion). This is the categorical axis that separates motion from everything else.
 
-$$
-T = \overline{g g^T} = \begin{bmatrix} \overline{G_x^2} & \overline{G_x G_y} \\ \overline{G_x G_y} & \overline{G_y^2} \end{bmatrix}
-$$
-
-The eigenvalues $ \lambda_1, \lambda_2 $ of $ T $ describe the energy along the principal axes. 
-- If $ \lambda_1 \approx \lambda_2 $, the blur is isotropic (a circle) → **Defocus**.
-- If $ \lambda_1 \gg \lambda_2 $, the energy is highly directional (a line) → **Motion smear**.
-
-We compute the coherence $ \rho $:
-
-$$
-\rho = \frac{(\lambda_1 - \lambda_2)^2}{(\lambda_1 + \lambda_2)^2}
-$$
-
-Coherence approaches 1 for a streak (motion) and 0 for a disc (defocus). 
-
-**The Limitation:** These classical metrics are fast and mathematically sound, but they are *global*. They average the subject and the background together. A sharp subject against heavy bokeh yields a middling score, indistinguishable from a globally mild defocus.
+Two magnitudes and one axis. The classical bank carries a real signal.
 
 ---
 
-## 🧠 3. Phase II: The CNN Classifier (And Its Data Trap) <span id="cnn"></span>
+## 🧠 3. The Learned Approach & The Corpus Trap <span id="cnn"></span>
 
-To gain spatial understanding, we turn to Convolutional Neural Networks (CNNs). We define a 5-class taxonomy: `sharp`, `global_motion`, `global_defocus`, `local_motion`, and `bokeh`.
+Since the classical bank carries a signal, the obvious next step is to put it into a classifier. We define 5 classes: `sharp`, `global_motion`, `global_defocus`, `local_motion`, and `bokeh`.
 
-### The Dataset Catastrophe
-We combined two datasets: **Kwentar** (which contains global motion and global defocus) and **CUHK** (which contains local motion and bokeh).
+But here lies the trap.
 
-When we trained a CNN on this, it quickly achieved high accuracy. But it was a trap. The model realized that `local_motion` *only* existed in the CUHK dataset, and `global_defocus` *only* existed in Kwentar. The network stopped looking for blur and started looking for the sensor noise, color profile, and lens characteristics of the specific cameras used in those datasets. 
+![Corpus Trap](assets/corpus.png)
 
-**The architecture cannot solve a dataset problem.** We had to aggressively curate 8 different archives to ensure at least 3 separate camera sources existed for every single class before the CNN was forced to actually learn the physics of blur.
+We used two datasets: Kwentar (which has the global states) and CUHK (a blur-detection set with only local states). Put them together, and look at what the classifier sees: two disjoint blocks. 
+
+`local_motion` means CUHK and `global_defocus` means Kwentar. The class and the archive are the exact same fact. The network learns to recognize the dataset signature, not the blur. You cannot solve a dataset problem with an architecture. We had to heavily curate 8 different archives to ensure at least 3 sources per class.
 
 ---
 
-## 📐 4. Phase III: The Window Vector Field (Physical Interpretation) <span id="window"></span>
+## 📐 4. The Window-Based Approach (Fields) <span id="window"></span>
 
-Even with a perfect dataset, a CNN outputs a black-box class label. If it predicts `local_motion`, the photographer cannot see *where* the motion is or *why* the network decided that.
+A CNN outputs a global class. But blur varies across the image. We need a map. We divide the image into windows and compute the classical metrics (and a lightweight CNN embedding) per window. 
 
-To achieve **Assisted Culling**, we slice the image into overlapping windows. We do not ask the network for a class; we ask it for a physical measurement. Each window predicts a vector:
-- **Magnitude:** The width of the blur kernel.
-- **Orientation:** The angle of the smear.
+The structure tensor of a window is a 2x2 symmetric matrix, which geometrically represents an ellipse. The output is not a color map, it is the actual ellipses drawn over the image.
 
-These predictions are projected back onto the image as geometric glyphs (ellipses). 
+![Windows Before Diffusion](assets/windows_before.png)
+
+Read the rows across:
+1. **The Schnauzer (Control):** Every window is sharp. Ellipses are small and round. 
+2. **The Wheelie (Panning shot):** The rider is sharp (small round dots), but the street is smeared horizontally (flat segments). One frame, two answers. A global median width would just average them and be wrong everywhere. 
+3. **The Vase (Bokeh):** The background is flat and out of focus. A flat surface has near-zero high-frequency energy. There is nothing to measure. A system forced to predict per window would call it blurred. This system says nothing (the pink areas), which is the physical truth.
+
+To fill the pink gaps, we use a diffusion process. We minimize an energy functional where windows pull the field toward their measurement, but the smoothness constraint is guided by the image's original luminance. The result is a dense, continuous map of the focal plane.
 
 <video width="100%" controls>
   <source src="assets/blur_moto.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
-*(Above: The vector field at work. Notice the ellipses on the background are large circles (defocus), while the ellipses on the moving wheels are flat, horizontal segments (motion smear). The subject's torso is sharp (small dots).)*
-
-### Field Diffusion
-A flat wall has no high-frequency energy. A window looking purely at a white wall cannot measure blur, because there are no edges to smear. 
-Instead of forcing the network to guess, the window outputs an *empty* reading. We then use a diffusion algorithm (minimizing an energy functional) to propagate the blur readings from the edges into the flat regions, using the image's original luminance as a guiding wire. The result is a dense, continuous, physically accurate map of the focal plane.
+*(Above: The vector field overlay. Notice the large circles in the bokeh, and the sharp dots on the subject).*
 
 ---
 
-## ⚖️ 5. The Final Decision: Subject vs Background <span id="fusion"></span>
+## ⚖️ 5. The Fusion Judge <span id="fusion"></span>
 
-We have an incredible spatial map, but we still need to make a culling decision. 
+When the CNN tower predicts a local class, how do we decide if the subject is sharper than the outside (a keeper) or worse (a reject)?
 
-Using an off-the-shelf Salient Object Detection (S3OD) mask, we split the frame into two regions: **Subject** and **Outside**.
+We use a salient-object mask (S3OD) to split the frame into Subject and Outside. We then use 3 probes (Laplacian Variance, Tenengrad, and the CNN Embedding gap). All three compute a bounded score from -1 (background sharper) to +1 (subject sharper).
 
-We compute our metrics (Laplacian Variance, Tenengrad, and the CNN embedding features) independently on the Subject and on the Outside. For each metric, we compute a normalized differential:
+![The Judges](assets/judges.png)
 
-$$
-\text{Score} = \frac{\text{Subject} - \text{Outside}}{|\text{Subject}| + |\text{Outside}| + \epsilon}
-$$
+We don't trust just the network. The CNN probe alone is the *weakest* of the three (0.908). But the weighted fusion of all three reaches 0.951. The fusion is not a hedge; it is the result.
 
-This bounds the score between -1 and +1. Positive means the subject is sharper (keep, bokeh). Negative means the background is sharper (reject, missed focus).
+Finally, we ship an abstention band $ \tau $. If the frame is too close to call, the module refuses to decide, passing the vector field map to the photographer.
 
-Instead of relying on the CNN alone (which scored 0.908), we **fuse** the three metrics. The weighted fusion achieves 0.951 accuracy. We set an abstention band $ \tau $ around zero: if the score is too close to call, the module abstains, passing the image to the photographer with the vector field overlay visible.
+![The Blur Rule](assets/blur_rule.png)
 
-The photographer looks at the screen, sees the ellipses, understands the machine's reasoning instantly, and clicks Keep or Reject. 
-That is true **Assisted Culling**.
+This is Assisted Culling.
 
 ---
 
