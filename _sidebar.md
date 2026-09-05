@@ -10,9 +10,10 @@
   - [🧬 ResNet: Deep Residual Learning](ai/resnet/resnet.md)
   - [🧬 RegNet: Designing Network Design Spaces](ai/regnet/regnet.md)
 
-- **Assisted Culling**
-  - [👁️ Eye Status](cross/culling/eye-status.md)
-  - [🌫️ Blur Detection](cross/culling/blur.md)
+- **Cross-Domain**
+  - **Assisted Culling**
+    - [👁️ Eye Status](cross/culling/eye-status.md)
+    - [🌫️ Blur Detection](cross/culling/blur.md)
 
 - **Links**
   - [GitHub](https://github.com/KpihX/sciencurious)
