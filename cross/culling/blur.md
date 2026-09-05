@@ -6,7 +6,7 @@
 > 👤 Author: KpihX
 > 📚 Code & Repo: [GitHub](https://github.com/KpihX/culling-presentation) · [GitLab](https://gitlab.com/kpihx/culling-presentation)
 
-> 🔗 **Prequel:** [Eye Status: Geometry vs Deep Learning](eye-status.md)
+> 🔗 **Prequel:** [Eye Status: Geometry vs Deep Learning](cross/culling/eye-status.md)
 
 ---
 
@@ -220,7 +220,7 @@ The result is a dense, continuous map of the focal plane, drawn directly over th
 What if we could detect bokeh versus a missed subject not by a hard threshold, but by the way the subject is integrated?
 
 <video width="100%" controls>
-  <source src="assets/a23_pair.mp4" type="video/mp4">
+  <source src="cross/culling/assets/a23_pair.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 

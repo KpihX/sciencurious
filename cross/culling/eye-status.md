@@ -6,7 +6,7 @@
 > 👤 Author: KpihX
 > 📚 Code & Repo: [GitHub](https://github.com/KpihX/culling-presentation) · [GitLab](https://gitlab.com/kpihx/culling-presentation)
 
-> 🔗 **Sequel:** [Blur: From Scalar Scores to Spatial Fields](blur.md)
+> 🔗 **Sequel:** [Blur: From Scalar Scores to Spatial Fields](cross/culling/blur.md)
 
 ---
 
