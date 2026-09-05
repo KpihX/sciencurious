@@ -23,7 +23,7 @@
 - [ ] **🧩 The Preoccupation:** Analyze why removing convolutional inductive biases (spatial locality and translation equivariance) allows models to achieve higher capacity on massive datasets, but causes them to underperform on small datasets.
 - [ ] **💡 The Intuition:** Explore the representation of images as sequences of patches (visual "words") and how self-attention creates global receptive fields starting at the very first layer.
 - [ ] **📐 Mathematical Anatomy:**
-  - **Patch Projection:** Derivation of how a 2D image \( X \in \mathbb{R}^{H \times W \times C} \) is flattened into patches \( X_p \in \mathbb{R}^{N \times (P^2 C)} \) and projected to embedding dimension \( d \).
+  - **Patch Projection:** Derivation of how a 2D image $ X \in \mathbb{R}^{H \times W \times C} $ is flattened into patches $ X_p \in \mathbb{R}^{N \times (P^2 C)} $ and projected to embedding dimension $ d $.
   - **Self-Attention Mechanism:** Deconstruct the query-key-value scaling:
 
 $$
@@ -39,13 +39,13 @@ $$
 - [ ] **🧩 The Preoccupation:** Explore how generative modeling can be formulated as a physical process of structured denoising rather than direct density estimation (like GANs or VAEs).
 - [ ] **💡 The Intuition:** Understand how slowly destroying image structure with Gaussian noise allows us to learn a reverse trajectory to reconstruct images from pure chaos.
 - [ ] **📐 Mathematical Anatomy:**
-  - **Forward (Noising) Process:** The Markov chain adding noise over steps \( t \):
+  - **Forward (Noising) Process:** The Markov chain adding noise over steps $ t $:
 
 $$
 q(x_t \mid x_{t-1}) = \mathcal{N}(x_t; \sqrt{1 - \beta_t} x_{t-1}, \beta_t I)
 $$
 
-    and the closed-form shortcut to sample at any step \( t \) given \( x_0 \) using \( \alpha_t = 1 - \beta_t \) and \( \bar{\alpha}_t = \prod_{i=1}^t \alpha_i \):
+    and the closed-form shortcut to sample at any step $ t $ given $ x_0 $ using $ \alpha_t = 1 - \beta_t $ and $ \bar{\alpha}_t = \prod_{i=1}^t \alpha_i $:
 
 $$
 q(x_t \mid x_0) = \mathcal{N}(x_t; \sqrt{\bar{\alpha}_t} x_0, (1 - \bar{\alpha}_t) I)
