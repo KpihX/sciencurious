@@ -24,7 +24,6 @@
 sciencurious/
 ├── math/<article>/      ← article.md + scripts/ + assets/ (+ integration.mp4)
 ├── ai/<article>/        ← article.md + assets/ (+ scripts/ si génération)
-├── cross/<topic>/       ← cross-domain articles (e.g., culling)
 ├── cs/                  ← computer science articles (future)
 ├── physics/             ← physics articles (future)
 ├── assets/              ← brand hub: logo-nobg (logo), banner (page background)

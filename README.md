@@ -27,14 +27,6 @@ Intuitive visual articles on mathematics, physics, and computer science.
 | [ResNet: Deep Residual Learning](ai/resnet/resnet.md) | Degradation → residual → clean-path proof | Published |
 | [RegNet: Designing Network Design Spaces](ai/regnet/regnet.md) | Design spaces, quantized widths, group conv, SE, recipes | Published |
 
-### Cross-Domain
-
-| Article | Topic | Status |
-|---------|-------|--------|
-| [Assisted Culling](cross/culling/culling.md) | The philosophy of AI photo culling | Published |
-| [Eye Status](cross/culling/eye-status.md) | Geometric vs Learned approaches (EAR vs RegNet) | Published |
-| [Blur Detection](cross/culling/blur.md) | From classical metrics to spatial vector fields | Published |
-
 ### Physics
 
 *Coming soon — relativity, quantum, thermodynamics.*
