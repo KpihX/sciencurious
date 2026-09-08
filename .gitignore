@@ -1,3 +1,5 @@
 # Local ignores — ONLY volatile runtimes. NEVER assets/ (figures, videos, brand).
 .venv/
 __pycache__/
+# Oversized source (>100MB GitHub limit, kept on disk + Gdrive) — history rewritten 2026-09-08 to untrack it
+raw/bloc-notes/quatrieme-bloc-notes/quatrieme-bloc-notes.pdf
