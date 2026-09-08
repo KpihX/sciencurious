@@ -3,6 +3,7 @@
 > Généré le 2026-09-06 par scan `file -b` + `pdfinfo` des 240 sous-dossiers.
 > Statuts : TRANSCRIT (md jumeau présent) · LISIBLE À TRANSCRIRE (rien — 0 restant hors 4e) · CHIFFRÉ (illisible, clé MyScript/Nebo/Office à chasser, RIEN à supprimer — historique pré-2026-09-07) · RESTAURÉ Datas1 2026-09-07 — À TRANSCRIRE (fichier remplacé par version saine depuis `/run/media/kpihx/KpihX-Datas1/Travaux/`, vérifié `pdfinfo`/PIL, 0 défaut) · HORS-SCOPE (md volontairement absent) · EN PAUSE (4e bloc, reprise à la toute fin).
 > Preuve d'intégrité : `FEAB.pdf` source md5 == raw md5 (`cf66907d08cc256f0581483823c7796a`) — le chiffrement est à la source, les copies sont intactes.
+> MAJ 2026-09-08 — Réorganisation sémantique : `tableau-noir/` (59 dossiers, mix forme) dissous → reclassés par fond (algèbre 13, analyse-fonctions 9, analyse-intégrales 6, analyse-suites 6, géométrie 8, physique 10, probas 2, ensembles 2, nouveau `divers/` 3) ; 4 maths de `photos-dessins/` reclassées (pgcd→algèbre, cauchy+jacobien→analyse-fonctions, intégrale-trigo→analyse-intégrales) ; `photos-dessins/` → `dessins-photos/` (iconographie restante) ; `bloc-notes/` conservé (carnets transverses, intégrité). 232 dossiers, 13 thèmes.
 > MAJ 2026-09-07 — Restauration : 139 PDF remplacés depuis `Travaux/Documents/PDF/` (+1 depuis `Travaux/Images/2D/`, mapping sémantique slug→titre naturel, tables `/tmp/map-pdf.tsv` + cas spécial) et 90 images depuis `Travaux/Images/2D/` (table `/tmp/map-img.tsv`), tous `cp -p` + vérifiés (`pdfinfo` + `PIL.Image.verify/load`) — PDF-BAD=0, IMG-BAD=0. Les 228 lignes CHIFFRÉ passent à RESTAURÉ (annotation `ex-CHIFFRÉ` conservée comme historique).
 
 | Dossier | Fichier | Statut |
@@ -121,38 +122,38 @@
 | informatique/graphes-terminale | graphes-terminale.pdf | IGNORED (cours numérique Nitro) |
 | informatique/parcours-graphes | parcours-graphes.pdf | TRANSCRIT (ex-CHIFFRÉ data, 4.5M) |
 | informatique/systemes-numeration-binaire | unites-binaires.pdf + binary-system.pdf | TRANSCRIT (fusion FR+EN, md bilingue) |
-| photos-dessins/autoportrait-2019 | autoportrait-2019.jpg | IGNORED (photo stylisée, pas de maths manuscrites) |
-| photos-dessins/avatar | avatar.jpg | IGNORED (dessin Aang, pas de maths manuscrites) |
-| photos-dessins/beerus-sama | beerus-sama.jpg | IGNORED (dessin DBZ Beerus, pas de maths manuscrites) |
-| photos-dessins/black-goku | black-goku.jpg | IGNORED (dessin DBZ Black Goku, pas de maths manuscrites) |
-| photos-dessins/boule-cristal | boule-cristal.jpg | TRANSCRIT |
-| photos-dessins/algorithme-pgcd-euclide | algorithme-pgcd-euclide.jpg | TRANSCRIT (ex-CHIFFRÉ data, 56K — md 63l + PNG vérifié) |
-| photos-dessins/capture-fev2021-1 | capture-fev2021-1.png | IGNORED (capture logicielle, pas de maths manuscrites) |
-| photos-dessins/capture-fev2021-2 | capture-fev2021-2.png | IGNORED (capture logicielle, pas de maths manuscrites) |
-| photos-dessins/cerveau-dessin | cerveau-dessin.jpg | IGNORED (dessin anatomique cerveau, pas de maths manuscrites) |
-| photos-dessins/crane-dessin | crane-dessin.jpg | IGNORED (dessin anatomique crâne, pas de maths manuscrites) |
-| photos-dessins/diptyque-jan2021-1 | diptyque-jan2021-1.jpg | IGNORED (photo objet, pas de maths manuscrites) |
-| photos-dessins/diptyque-jan2021-2 | diptyque-jan2021-2.jpg | IGNORED (photo objet, pas de maths manuscrites) |
-| photos-dessins/esf-1 | esf-1.jpg | IGNORED (photo couture, pas de maths manuscrites) |
-| photos-dessins/esf-2 | esf-2.jpg | IGNORED (photo couture, pas de maths manuscrites) |
-| photos-dessins/goku-ss3 | goku-ss3.jpg | IGNORED (dessin DBZ Goku SS3, pas de maths manuscrites) |
-| photos-dessins/goku-ss4 | goku-ss4.jpg | IGNORED (dessin DBZ Goku SS4, pas de maths manuscrites) |
-| photos-dessins/goku-vegeta-ss2 | goku-vegeta-ss2.jpg | IGNORED (dessin DBZ Goku/Vegeta SS2, pas de maths manuscrites) |
-| photos-dessins/golden-freezer | golden-freezer.jpg | IGNORED (dessin DBZ Golden Freezer, pas de maths manuscrites) |
-| photos-dessins/lamborghini | lamborghini.jpg | IGNORED (dessin voiture, pas de maths manuscrites) |
-| photos-dessins/mini-goku-ss4 | mini-goku-ss4.jpg | IGNORED (dessin DBZ mini Goku SS4, pas de maths manuscrites) |
-| photos-dessins/photo-dec2020 | photo-dec2020.jpg | IGNORED (photo savons, pas de maths manuscrites) |
-| photos-dessins/cauchy-schwarz-droite-disque | cauchy-schwarz-droite-disque.jpg | TRANSCRIT (ex-CHIFFRÉ data, 3.5M — md 53l + PNG) |
-| photos-dessins/jacobien-changement-variable-ordre2 | jacobien-changement-variable-ordre2.jpg | TRANSCRIT (ex-CHIFFRÉ data, 3.0M — md 45l + PNG) |
-| photos-dessins/rafale-fev2020-1 | rafale-fev2020-1.jpg | IGNORED (maquette maison angle 1, pas de maths manuscrites) |
-| photos-dessins/rafale-fev2020-2 | rafale-fev2020-2.jpg | IGNORED (maquette maison angle 2, pas de maths manuscrites) |
-| photos-dessins/rafale-fev2020-3 | rafale-fev2020-3.jpg | IGNORED (maquette maison angle 3, pas de maths manuscrites) |
-| photos-dessins/rafale-fev2020-4 | rafale-fev2020-4.jpg | IGNORED (maquette maison angle 4, pas de maths manuscrites) |
-| photos-dessins/tablier-esf-2021 | tablier-esf-2021.jpg | HORS-SCOPE (md volontairement absent) |
-| photos-dessins/tricotage | tricotage.jpg | HORS-SCOPE (md volontairement absent) |
-| photos-dessins/vegeta-ss4 | vegeta-ss4.jpg | IGNORED (dessin DBZ Vegeta SS4, pas de maths manuscrites) |
-| photos-dessins/whatsapp-dec2020 | whatsapp-dec2020.jpg | IGNORED (bricolage carte monde, pas de maths manuscrites) |
-| photos-dessins/integrale-trigo-demi-disque-pi | integrale-trigo-demi-disque-pi.jpeg | TRANSCRIT (ex-CHIFFRÉ data, 252K — md 35l + PNG) |
+| dessins-photos/autoportrait-2019 | autoportrait-2019.jpg | IGNORED (photo stylisée, pas de maths manuscrites) |
+| dessins-photos/avatar | avatar.jpg | IGNORED (dessin Aang, pas de maths manuscrites) |
+| dessins-photos/beerus-sama | beerus-sama.jpg | IGNORED (dessin DBZ Beerus, pas de maths manuscrites) |
+| dessins-photos/black-goku | black-goku.jpg | IGNORED (dessin DBZ Black Goku, pas de maths manuscrites) |
+| dessins-photos/boule-cristal | boule-cristal.jpg | TRANSCRIT |
+| algebre-arithmetique/algorithme-pgcd-euclide | algorithme-pgcd-euclide.jpg | TRANSCRIT (ex-CHIFFRÉ data, 56K — md 63l + PNG vérifié) |
+| dessins-photos/capture-fev2021-1 | capture-fev2021-1.png | IGNORED (capture logicielle, pas de maths manuscrites) |
+| dessins-photos/capture-fev2021-2 | capture-fev2021-2.png | IGNORED (capture logicielle, pas de maths manuscrites) |
+| dessins-photos/cerveau-dessin | cerveau-dessin.jpg | IGNORED (dessin anatomique cerveau, pas de maths manuscrites) |
+| dessins-photos/crane-dessin | crane-dessin.jpg | IGNORED (dessin anatomique crâne, pas de maths manuscrites) |
+| dessins-photos/diptyque-jan2021-1 | diptyque-jan2021-1.jpg | IGNORED (photo objet, pas de maths manuscrites) |
+| dessins-photos/diptyque-jan2021-2 | diptyque-jan2021-2.jpg | IGNORED (photo objet, pas de maths manuscrites) |
+| dessins-photos/esf-1 | esf-1.jpg | IGNORED (photo couture, pas de maths manuscrites) |
+| dessins-photos/esf-2 | esf-2.jpg | IGNORED (photo couture, pas de maths manuscrites) |
+| dessins-photos/goku-ss3 | goku-ss3.jpg | IGNORED (dessin DBZ Goku SS3, pas de maths manuscrites) |
+| dessins-photos/goku-ss4 | goku-ss4.jpg | IGNORED (dessin DBZ Goku SS4, pas de maths manuscrites) |
+| dessins-photos/goku-vegeta-ss2 | goku-vegeta-ss2.jpg | IGNORED (dessin DBZ Goku/Vegeta SS2, pas de maths manuscrites) |
+| dessins-photos/golden-freezer | golden-freezer.jpg | IGNORED (dessin DBZ Golden Freezer, pas de maths manuscrites) |
+| dessins-photos/lamborghini | lamborghini.jpg | IGNORED (dessin voiture, pas de maths manuscrites) |
+| dessins-photos/mini-goku-ss4 | mini-goku-ss4.jpg | IGNORED (dessin DBZ mini Goku SS4, pas de maths manuscrites) |
+| dessins-photos/photo-dec2020 | photo-dec2020.jpg | IGNORED (photo savons, pas de maths manuscrites) |
+| analyse-fonctions/cauchy-schwarz-droite-disque | cauchy-schwarz-droite-disque.jpg | TRANSCRIT (ex-CHIFFRÉ data, 3.5M — md 53l + PNG) |
+| analyse-fonctions/jacobien-changement-variable-ordre2 | jacobien-changement-variable-ordre2.jpg | TRANSCRIT (ex-CHIFFRÉ data, 3.0M — md 45l + PNG) |
+| dessins-photos/rafale-fev2020-1 | rafale-fev2020-1.jpg | IGNORED (maquette maison angle 1, pas de maths manuscrites) |
+| dessins-photos/rafale-fev2020-2 | rafale-fev2020-2.jpg | IGNORED (maquette maison angle 2, pas de maths manuscrites) |
+| dessins-photos/rafale-fev2020-3 | rafale-fev2020-3.jpg | IGNORED (maquette maison angle 3, pas de maths manuscrites) |
+| dessins-photos/rafale-fev2020-4 | rafale-fev2020-4.jpg | IGNORED (maquette maison angle 4, pas de maths manuscrites) |
+| dessins-photos/tablier-esf-2021 | tablier-esf-2021.jpg | HORS-SCOPE (md volontairement absent) |
+| dessins-photos/tricotage | tricotage.jpg | HORS-SCOPE (md volontairement absent) |
+| dessins-photos/vegeta-ss4 | vegeta-ss4.jpg | IGNORED (dessin DBZ Vegeta SS4, pas de maths manuscrites) |
+| dessins-photos/whatsapp-dec2020 | whatsapp-dec2020.jpg | IGNORED (bricolage carte monde, pas de maths manuscrites) |
+| analyse-integrales/integrale-trigo-demi-disque-pi | integrale-trigo-demi-disque-pi.jpeg | TRANSCRIT (ex-CHIFFRÉ data, 252K — md 35l + PNG) |
 | physique/adiabatique-laplace | adiabatique-laplace.pdf | TRANSCRIT (ex-CHIFFRÉ data, 2.1M) |
 | physique/associations-resistances | associations-resistances.pdf | TRANSCRIT (ex-CHIFFRÉ data, 256K) |
 | physique/chainette-ondes | chainette-ondes.pdf | TRANSCRIT (ex-CHIFFRÉ data, 2.3M) |
@@ -174,65 +175,65 @@
 | probas/crible-poincare | crible-poincare.pdf | TRANSCRIT (ex-CHIFFRÉ data, 772K) |
 | probas/proba-ensembles | proba-ensembles.pdf | TRANSCRIT (ex-CHIFFRÉ data, 4.1M) |
 | probas/urnes-billes | urnes-billes.pdf | TRANSCRIT (ex-CHIFFRÉ OpenPGP Secret Key, 1.5M) |
-| tableau-noir/accroissements-finis-version-images | accroissements-finis-version-images.pdf | TRANSCRIT (ex-CHIFFRÉ data, 2.5M) |
-| tableau-noir/asymptotes-dl | asymptotes-dl.jpg | TRANSCRIT (ex-CHIFFRÉ data, 3.8M) |
-| tableau-noir/bezout-hint | bezout-hint.jpg | TRANSCRIT (ex-CHIFFRÉ data, 1.1M) |
-| tableau-noir/bon-ordre-n | bon-ordre-n.jpg | TRANSCRIT (ex-CHIFFRÉ data, 4.1M) |
-| tableau-noir/caracteristiques-plan | caracteristiques-plan-prise1.jpg + caracteristiques-plan-prise2.jpg | TRANSCRIT (fusion 1+2, même feuille) |
-| tableau-noir/champ-bobine | champ-bobine.jpg | TRANSCRIT (ex-CHIFFRÉ data, 3.9M) |
-| tableau-noir/coeur-schema | coeur-schema.png | TRANSCRIT (ex-CHIFFRÉ data, 44K) |
-| tableau-noir/cone-cylindriques | cone-cylindriques-prise1.jpg + cone-cylindriques-prise2.jpg | TRANSCRIT (fusion 1+2, même feuille) |
-| tableau-noir/congruence-photo | congruence-photo.jpg | TRANSCRIT |
-| tableau-noir/conjecture-jeukwa | conjecture-jeukwa.jpeg | TRANSCRIT (ex-CHIFFRÉ data, 452K) |
-| tableau-noir/convergence-monotone | convergence-monotone.jpg | TRANSCRIT (ex-CHIFFRÉ data, 3.4M) |
-| tableau-noir/cycloide-schema | cycloide-schema.png | TRANSCRIT (ex-CHIFFRÉ data, 20K) |
-| tableau-noir/derangements | derangements.jpg | TRANSCRIT (ex-CHIFFRÉ data, 4.2M) |
-| tableau-noir/differentielle-surface | differentielle-surface-prise1.jpg + differentielle-surface-prise2.jpg | TRANSCRIT (fusion 1+2, même feuille) |
-| tableau-noir/dirichlet-non-absolue | dirichlet-non-absolue.jpg | TRANSCRIT (ex-CHIFFRÉ data, 4.9M) |
-| tableau-noir/double-produit-vectoriel-tableau | double-produit-vectoriel-tableau.jpg | TRANSCRIT (ex-CHIFFRÉ TransCopy disk image, 4.1M) |
-| tableau-noir/enigme-sabliers | enigme-sabliers.jpg | TRANSCRIT (ex-CHIFFRÉ data, 5.1M) |
-| tableau-noir/ensembles-parties-ens | ensembles-parties-ens.jpg | TRANSCRIT (ex-CHIFFRÉ data, 3.2M) |
-| tableau-noir/equation-fonctions | equation-fonctions.jpg | TRANSCRIT |
-| tableau-noir/equation-puissance | equation-puissance.jpg | TRANSCRIT (ex-CHIFFRÉ data, 5.5M) |
-| tableau-noir/equation-vectorielle | equation-vectorielle.jpg | TRANSCRIT (ex-CHIFFRÉ data, 6.4M) |
-| tableau-noir/erf-schema | erf-schema.jpg | TRANSCRIT (ex-CHIFFRÉ data, 36K) |
-| tableau-noir/factorielle-expression | factorielle-expression.jpg | TRANSCRIT (ex-CHIFFRÉ data, 5.9M) |
-| tableau-noir/groupe-fini-s3 | groupe-fini-s3.jpg | TRANSCRIT (ex-CHIFFRÉ data, 928K) |
-| tableau-noir/independance-cos | independance-cos.jpg | TRANSCRIT (ex-CHIFFRÉ data, 3.0M) |
-| tableau-noir/inegalites-factorielles | inegalites-factorielles.jpg | TRANSCRIT (ex-CHIFFRÉ data, 4.6M) |
-| tableau-noir/integrale-or-tableau | integrale-or-tableau.jpg | TRANSCRIT (ex-CHIFFRÉ data, 4.3M) |
-| tableau-noir/integrale-tableau-1 | integrale-tableau-1.jpg | TRANSCRIT (ex-CHIFFRÉ data, 4.2M) |
-| tableau-noir/integrale-tableau-2 | integrale-tableau-2.jpg | TRANSCRIT (ex-CHIFFRÉ data, 4.0M) |
-| tableau-noir/integrale-tableau-3 | integrale-tableau-3.jpg | TRANSCRIT (ex-CHIFFRÉ data, 4.2M) |
-| tableau-noir/integrale-tableau-4 | integrale-tableau-4.jpg | TRANSCRIT (ex-CHIFFRÉ data, 5.0M) |
-| tableau-noir/integrale-zeta3 | integrale-zeta3.jpg | TRANSCRIT (ex-CHIFFRÉ data, 904K) |
-| tableau-noir/serie-convergence | serie-convergence.jpg | TRANSCRIT (ex-CHIFFRÉ data, 4.5M) |
-| tableau-noir/limite-tableau-1 | limite-tableau-1.jpg | TRANSCRIT (ex-CHIFFRÉ data, 4.4M) |
-| tableau-noir/limite-tableau-2 | limite-tableau-2.jpg | TRANSCRIT (ex-CHIFFRÉ data, 4.2M) |
-| tableau-noir/maison-village-apercu | maison-village-apercu.png | TRANSCRIT (ex-CHIFFRÉ data, 48K) |
-| tableau-noir/moins-un-fois-moins-un | moins-un-fois-moins-un.jpg | TRANSCRIT (ex-CHIFFRÉ data, 2.0M) |
-| tableau-noir/nombre-or | nombre-or.jpg | TRANSCRIT (ex-CHIFFRÉ data, 4.3M) |
-| tableau-noir/parabole-naturelle | parabole-naturelle.jpg | TRANSCRIT (ex-CHIFFRÉ data, 6.7M) |
-| tableau-noir/parabole-schema | parabole-schema.png | TRANSCRIT (ex-CHIFFRÉ data, 72K) |
-| tableau-noir/poids-corps | poids-corps.jpg | TRANSCRIT (ex-CHIFFRÉ OpenPGP Public Key, 6.4M) |
-| tableau-noir/poisson-stirling | poisson-stirling.jpg | TRANSCRIT (ex-CHIFFRÉ data, 5.7M) |
-| tableau-noir/preambule-manuscrit | preambule-manuscrit.jpg | TRANSCRIT (ex-CHIFFRÉ data, 1.2M) |
-| tableau-noir/primalite-probabiliste | primalite-probabiliste.jpeg | IGNORED (photo écran VS Code, code tapuscrit, pas écrit-main) |
-| tableau-noir/projection-stereographique | projection-stereographique.jpg | TRANSCRIT (ex-CHIFFRÉ DOS executable, 3.9M) |
-| tableau-noir/puissance-point | puissance-point.jpg | TRANSCRIT (ex-CHIFFRÉ data, 4.4M) |
-| tableau-noir/recurrence-justification | recurrence-justification.jpg | TRANSCRIT (ex-CHIFFRÉ data, 4.0M) |
-| tableau-noir/remarques-suites | remarques-suites.jpg | TRANSCRIT (ex-CHIFFRÉ data, 4.9M) |
-| tableau-noir/reseaux-symetries | reseaux-symetries.jpg | TRANSCRIT (ex-CHIFFRÉ data, 4.0M) |
-| tableau-noir/resistance-equivalente-symetrie | resistance-equivalente-symetrie.jpeg | TRANSCRIT (ex-CHIFFRÉ data, 604K) |
-| tableau-noir/ressort-comprime | ressort-comprime.png | IGNORED (captures GeoGebra 3D logicielles, pas écrit-main) |
-| tableau-noir/ressort-relache | ressort-relache.png | IGNORED (captures GeoGebra 3D logicielles, pas écrit-main) |
-| tableau-noir/rotationnel-produit | rotationnel-produit.jpg | TRANSCRIT (ex-CHIFFRÉ data, 3.7M) |
-| tableau-noir/schwarz-derivees-partielles | schwarz-derivees-partielles.jpg | TRANSCRIT (ex-CHIFFRÉ data, 4.6M) |
-| tableau-noir/serie-ppcm | serie-ppcm.jpg | TRANSCRIT (ex-CHIFFRÉ data, 1.2M) |
-| tableau-noir/supplementaire-commun | supplementaire-commun.jpg | TRANSCRIT (ex-CHIFFRÉ data, 3.0M) |
-| tableau-noir/theoreme-ampere | theoreme-ampere.jpg | TRANSCRIT (ex-CHIFFRÉ data, 3.9M) |
-| tableau-noir/theoreme-gendarmes | theoreme-gendarmes.jpg | TRANSCRIT (ex-CHIFFRÉ data, 4.6M) |
-| tableau-noir/topologie-circuits | topologie-circuits.jpg | TRANSCRIT (ex-CHIFFRÉ data, 6.8M) |
+| analyse-fonctions/accroissements-finis-version-images | accroissements-finis-version-images.pdf | TRANSCRIT (ex-CHIFFRÉ data, 2.5M) |
+| analyse-fonctions/asymptotes-dl | asymptotes-dl.jpg | TRANSCRIT (ex-CHIFFRÉ data, 3.8M) |
+| algebre-arithmetique/bezout-hint | bezout-hint.jpg | TRANSCRIT (ex-CHIFFRÉ data, 1.1M) |
+| ensembles-cardinaux/bon-ordre-n | bon-ordre-n.jpg | TRANSCRIT (ex-CHIFFRÉ data, 4.1M) |
+| geometrie/caracteristiques-plan | caracteristiques-plan-prise1.jpg + caracteristiques-plan-prise2.jpg | TRANSCRIT (fusion 1+2, même feuille) |
+| physique/champ-bobine | champ-bobine.jpg | TRANSCRIT (ex-CHIFFRÉ data, 3.9M) |
+| geometrie/coeur-schema | coeur-schema.png | TRANSCRIT (ex-CHIFFRÉ data, 44K) |
+| geometrie/cone-cylindriques | cone-cylindriques-prise1.jpg + cone-cylindriques-prise2.jpg | TRANSCRIT (fusion 1+2, même feuille) |
+| algebre-arithmetique/congruence-photo | congruence-photo.jpg | TRANSCRIT |
+| algebre-arithmetique/conjecture-jeukwa | conjecture-jeukwa.jpeg | TRANSCRIT (ex-CHIFFRÉ data, 452K) |
+| analyse-suites-series/convergence-monotone | convergence-monotone.jpg | TRANSCRIT (ex-CHIFFRÉ data, 3.4M) |
+| geometrie/cycloide-schema | cycloide-schema.png | TRANSCRIT (ex-CHIFFRÉ data, 20K) |
+| probas/derangements | derangements.jpg | TRANSCRIT (ex-CHIFFRÉ data, 4.2M) |
+| geometrie/differentielle-surface | differentielle-surface-prise1.jpg + differentielle-surface-prise2.jpg | TRANSCRIT (fusion 1+2, même feuille) |
+| analyse-suites-series/dirichlet-non-absolue | dirichlet-non-absolue.jpg | TRANSCRIT (ex-CHIFFRÉ data, 4.9M) |
+| algebre-arithmetique/double-produit-vectoriel-tableau | double-produit-vectoriel-tableau.jpg | TRANSCRIT (ex-CHIFFRÉ TransCopy disk image, 4.1M) |
+| divers/enigme-sabliers | enigme-sabliers.jpg | TRANSCRIT (ex-CHIFFRÉ data, 5.1M) |
+| ensembles-cardinaux/ensembles-parties-ens | ensembles-parties-ens.jpg | TRANSCRIT (ex-CHIFFRÉ data, 3.2M) |
+| analyse-fonctions/equation-fonctions | equation-fonctions.jpg | TRANSCRIT |
+| algebre-arithmetique/equation-puissance | equation-puissance.jpg | TRANSCRIT (ex-CHIFFRÉ data, 5.5M) |
+| algebre-arithmetique/equation-vectorielle | equation-vectorielle.jpg | TRANSCRIT (ex-CHIFFRÉ data, 6.4M) |
+| analyse-fonctions/erf-schema | erf-schema.jpg | TRANSCRIT (ex-CHIFFRÉ data, 36K) |
+| algebre-arithmetique/factorielle-expression | factorielle-expression.jpg | TRANSCRIT (ex-CHIFFRÉ data, 5.9M) |
+| algebre-arithmetique/groupe-fini-s3 | groupe-fini-s3.jpg | TRANSCRIT (ex-CHIFFRÉ data, 928K) |
+| analyse-fonctions/independance-cos | independance-cos.jpg | TRANSCRIT (ex-CHIFFRÉ data, 3.0M) |
+| analyse-suites-series/inegalites-factorielles | inegalites-factorielles.jpg | TRANSCRIT (ex-CHIFFRÉ data, 4.6M) |
+| analyse-integrales/integrale-or-tableau | integrale-or-tableau.jpg | TRANSCRIT (ex-CHIFFRÉ data, 4.3M) |
+| analyse-integrales/integrale-tableau-1 | integrale-tableau-1.jpg | TRANSCRIT (ex-CHIFFRÉ data, 4.2M) |
+| analyse-integrales/integrale-tableau-2 | integrale-tableau-2.jpg | TRANSCRIT (ex-CHIFFRÉ data, 4.0M) |
+| analyse-integrales/integrale-tableau-3 | integrale-tableau-3.jpg | TRANSCRIT (ex-CHIFFRÉ data, 4.2M) |
+| analyse-integrales/integrale-tableau-4 | integrale-tableau-4.jpg | TRANSCRIT (ex-CHIFFRÉ data, 5.0M) |
+| analyse-integrales/integrale-zeta3 | integrale-zeta3.jpg | TRANSCRIT (ex-CHIFFRÉ data, 904K) |
+| analyse-suites-series/serie-convergence | serie-convergence.jpg | TRANSCRIT (ex-CHIFFRÉ data, 4.5M) |
+| analyse-fonctions/limite-tableau-1 | limite-tableau-1.jpg | TRANSCRIT (ex-CHIFFRÉ data, 4.4M) |
+| analyse-fonctions/limite-tableau-2 | limite-tableau-2.jpg | TRANSCRIT (ex-CHIFFRÉ data, 4.2M) |
+| divers/maison-village-apercu | maison-village-apercu.png | TRANSCRIT (ex-CHIFFRÉ data, 48K) |
+| algebre-arithmetique/moins-un-fois-moins-un | moins-un-fois-moins-un.jpg | TRANSCRIT (ex-CHIFFRÉ data, 2.0M) |
+| analyse-suites-series/nombre-or | nombre-or.jpg | TRANSCRIT (ex-CHIFFRÉ data, 4.3M) |
+| physique/parabole-naturelle | parabole-naturelle.jpg | TRANSCRIT (ex-CHIFFRÉ data, 6.7M) |
+| geometrie/parabole-schema | parabole-schema.png | TRANSCRIT (ex-CHIFFRÉ data, 72K) |
+| physique/poids-corps | poids-corps.jpg | TRANSCRIT (ex-CHIFFRÉ OpenPGP Public Key, 6.4M) |
+| probas/poisson-stirling | poisson-stirling.jpg | TRANSCRIT (ex-CHIFFRÉ data, 5.7M) |
+| divers/preambule-manuscrit | preambule-manuscrit.jpg | TRANSCRIT (ex-CHIFFRÉ data, 1.2M) |
+| algebre-arithmetique/primalite-probabiliste | primalite-probabiliste.jpeg | IGNORED (photo écran VS Code, code tapuscrit, pas écrit-main) |
+| geometrie/projection-stereographique | projection-stereographique.jpg | TRANSCRIT (ex-CHIFFRÉ DOS executable, 3.9M) |
+| geometrie/puissance-point | puissance-point.jpg | TRANSCRIT (ex-CHIFFRÉ data, 4.4M) |
+| algebre-arithmetique/recurrence-justification | recurrence-justification.jpg | TRANSCRIT (ex-CHIFFRÉ data, 4.0M) |
+| analyse-suites-series/remarques-suites | remarques-suites.jpg | TRANSCRIT (ex-CHIFFRÉ data, 4.9M) |
+| physique/reseaux-symetries | reseaux-symetries.jpg | TRANSCRIT (ex-CHIFFRÉ data, 4.0M) |
+| physique/resistance-equivalente-symetrie | resistance-equivalente-symetrie.jpeg | TRANSCRIT (ex-CHIFFRÉ data, 604K) |
+| physique/ressort-comprime | ressort-comprime.png | IGNORED (captures GeoGebra 3D logicielles, pas écrit-main) |
+| physique/ressort-relache | ressort-relache.png | IGNORED (captures GeoGebra 3D logicielles, pas écrit-main) |
+| physique/rotationnel-produit | rotationnel-produit.jpg | TRANSCRIT (ex-CHIFFRÉ data, 3.7M) |
+| analyse-fonctions/schwarz-derivees-partielles | schwarz-derivees-partielles.jpg | TRANSCRIT (ex-CHIFFRÉ data, 4.6M) |
+| algebre-arithmetique/serie-ppcm | serie-ppcm.jpg | TRANSCRIT (ex-CHIFFRÉ data, 1.2M) |
+| algebre-arithmetique/supplementaire-commun | supplementaire-commun.jpg | TRANSCRIT (ex-CHIFFRÉ data, 3.0M) |
+| physique/theoreme-ampere | theoreme-ampere.jpg | TRANSCRIT (ex-CHIFFRÉ data, 3.9M) |
+| analyse-fonctions/theoreme-gendarmes | theoreme-gendarmes.jpg | TRANSCRIT (ex-CHIFFRÉ data, 4.6M) |
+| physique/topologie-circuits | topologie-circuits.jpg | TRANSCRIT (ex-CHIFFRÉ data, 6.8M) |
 | vie-enspy/ceremonie-accueil-enspy | ceremonie-accueil-enspy.pdf | TRANSCRIT (ex-CHIFFRÉ data, 340K) |
 | vie-enspy/dossier-parrainage-3gi | dossier-parrainage-3gi.pdf | HORS-SCOPE (md volontairement absent) |
 | vie-enspy/ethique-estudiantine | ethique-estudiantine.pdf | TRANSCRIT (ex-CHIFFRÉ data, 672K) |

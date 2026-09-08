@@ -74,7 +74,7 @@ Par conséquent sous les hypothèses en amont, $\forall n \in \mathbb{N} \cap [n
 
 ## Figures
 
-Aucune figure ni schéma (page 2 relue ; page 1 non relue — limite des 20 pages). Le script `reproduce_recurrence-justification_1.py` appartient au dossier hors périmètre `tableau-noir/recurrence-justification`, pas à celui-ci.
+Aucune figure ni schéma (page 2 relue ; page 1 non relue — limite des 20 pages). Le script `reproduce_recurrence-justification_1.py` appartient au dossier `algebre-arithmetique/recurrence-justification`, pas à celui-ci.
 
 ## Vocabulaire
 

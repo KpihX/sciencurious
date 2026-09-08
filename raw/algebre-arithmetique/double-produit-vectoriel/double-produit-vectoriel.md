@@ -46,7 +46,7 @@ Donc $\vec{A} \wedge (\vec{B} \wedge \vec{C}) = (\vec{A} \cdot \vec{C})\vec{B} -
 
 Aucune figure à reproduire : démonstration texte, 2 pages relues en entier, sans schéma.
 
-N.B. : le script `reproduce_double-produit-vectoriel-tableau_1.py` présent dans `lab/scripts/` ne concerne PAS ce dossier (il cible `raw/tableau-noir/double-produit-vectoriel-tableau/`) — homonymie signalée, voir rapport.
+N.B. : le script `reproduce_double-produit-vectoriel-tableau_1.py` présent dans `lab/scripts/` ne concerne PAS ce dossier (il cible `raw/algebre-arithmetique/double-produit-vectoriel-tableau/`) — homonymie signalée, voir rapport.
 
 ## Vocabulaire / notions
 
