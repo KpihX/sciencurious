@@ -35,6 +35,8 @@ Ainsi $|G| = \sum_{F \in G/H} |H| = |G/H||H|$
 
 Schéma de démonstration : triangle ③ en haut, ① ⟹ ② au milieu, ④ en bas, avec flèches ② vers ③, ③ vers ①, ① vers ②, ② vers ④ et ④ vers ①.
 
+![Schéma de démonstration p. 2 : ①②③④ — reproduction via lab/scripts/reproduce_morphismes_groupes_1.py](assets/triangle-implications.png)
+
 ①⟹② / Soit $g \in G$. Ona : $gH = (gHg^{-1})g \subseteq Hg$ et de même [passage empâté — symétrique en $g^{-1}$] $\subseteq gH$ d'où $gH = Hg$
 
 ②⟹③ / Soit $x, y, u, v \in G$ / $[x]_g = [y]_g$ et $[u]_g = [v]_g$ [lecture incertaine — l'indice $g$ (gauche) est empâté]. Mq $[xu]_g = [yv]_g$. Ona : $(xu)H = x(uH) = x(vH)$ [car $uH = vH$] et $(xv)H$ [puis] $= x(Hv) = (xH)v = (yH)v = yvH$ [lecture incertaine — lettres $u$/$v$/$x$ empâtées ; usage de ② : $vH = Hv$ et $xH = yH$]
@@ -61,6 +63,8 @@ En effet [« en considérant la projection canonique » raturé] vu que $\mathrm
 
 [diagramme triangulaire : $p$ flèche vers $(G_1/\mathrm{Ker}\,\varphi, \bar{\times})$, $\chi$ flèche vers $(\varphi(G_1) \subseteq G_2, \circ)$]
 
+![Triangle p/χ p. 3 : φ = χ ∘ p — reproduction via lab/scripts/reproduce_morphismes_groupes_2.py](assets/triangle-p-chi.png)
+
 ---
 
 ## Page 4 — Cardinal, noyau et image (fin) et corollaire
@@ -84,13 +88,19 @@ $\iff \mathrm{Ker}\,\varphi = \{e_{G_1}\}$ [souligné]
 - Encre bleue sur papier ligné à marge rouge ; pages 3–4 très lisibles, pages 1–2 avec bords rognés et tracés empâtés (chaque doute est balisé).
 - Notations d'origine conservées : $Mq$ = montrons que, $Ona$ = on a, $H \le G$ / $H \triangleleft G$, $[x]_g$ = classe à gauche, $\mathrm{Ker}\,\varphi$ / $\mathrm{Im}\,\varphi$ / $\varphi(G_1)$.
 - Page 2 : les intitulés exacts des points ③ et ④ (« … admissible ») sont empâtés ; les implications ②⟹④ et ④⟹① sont admises « de même » sans détail.
-- Aucune figure à reproduire : les deux schémas (triangle d'implications p. 2, triangle $p$/$\chi$ p. 3) sont des croquis de preuve décrits en place.
+- Les deux schémas (triangle d'implications p. 2, triangle $p$/$\chi$ p. 3) sont codables (nœuds + flèches lisibles au scan) : reproduits en FORME, voir ## Figures.
 
 ---
 
 ## Figures
 
-Aucune figure à reproduire (aucun graphe/courbe/schéma géométrique) : pp. 1 et 4 re-vérifiées S4 (Lagrange p. 1, noyau-image + corollaire p. 4 — texte seul) ; p. 2–3 vérifiées — les deux croquis logiques (« Schéma de démonstration » ①②③④ p. 2, triangle $p$/$\chi$ p. 3, marge « PROUVÉ ») sont transcrits en place ci-dessus. Aucun script `reproduce_morphismes_groupes_N.py`, aucun PNG (aucun `assets/` créé).
+Schémas logiques pp. 2–3 (encre bleue).
+
+Reproduction (scripts `reproduce_morphismes_groupes_1.py` et `reproduce_morphismes_groupes_2.py`, exécutés avec `uv run`) : nœuds bleus, flèches simples/doubles comme tracées, quadrillage bleu `#9db3d8`. PNG relus et conformes aux croquis d'origine.
+
+![Schéma de démonstration p. 2 : ①②③④ — reproduction via lab/scripts/reproduce_morphismes_groupes_1.py](assets/triangle-implications.png)
+
+![Triangle p/χ p. 3 : φ = χ ∘ p — reproduction via lab/scripts/reproduce_morphismes_groupes_2.py](assets/triangle-p-chi.png)
 
 ---
 

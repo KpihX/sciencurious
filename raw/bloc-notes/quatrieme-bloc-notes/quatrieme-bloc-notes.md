@@ -2146,7 +2146,9 @@ d'où lim_{n→+∞} Uₙ = +∞. Par conséquent (Uₙ) est divergente et aussi
 
 * mvt circulaire [rouge, souligné]
 
-[schema au crayon : cercle, point M, vecteurs vitesse V, accélération a, base (t, n), angle θ — à reproduire]
+Figure (crayon) : cercle, point M, vecteurs vitesse V, accélération a, base (t, n), angle θ.
+
+![](assets/cercle-frenet.png)
 
 • V = dS/dt or S = θr d'où V = rθ̇ cad V⃗ = rθ̇ t⃗ [rouge + bleu]
 
@@ -2162,7 +2164,9 @@ a⃗ = rθ̈ t⃗ + V²/r n⃗ avec { anc = V²/r = rθ̇² ; at = rθ̈ = dV/dt
 
 * Pendule pesant [rouge, souligné]
 
-[schema au crayon en haut : pendule, angles θ, tensions T, poids P — pâle, à reproduire]
+Figure (crayon, en haut) : pendule, angles θ, tensions T, poids P.
+
+![](assets/pendule.png)
 
 TCI : P⃗ + T⃗ = m a⃗ [bleu, souligné]
 
@@ -2440,11 +2444,15 @@ Posons r² = x²+y², x = r cosθ, y = r sinθ [bleu — « y = r sinθ » pâle
 
 Montrons que dxdy = rdrdθ [bleu]
 
-- Meth1 : [rouge, souligné] [schema axes (x, y), rectangle dx×dy + Jacobien dA/dx [rouge] — à reproduire, suite p.120]
+- Meth1 : [rouge, souligné] schema axes (x, y), rectangle dx×dy + Jacobien dA/dx [rouge] (suite p.120).
+
+![](assets/jacobien-rectangle.png)
 
 ## Page 120 (Meth1 fin dxdy = rdrdθ, Meth2 début)
 
-[schema haut : dA/dr, rdθ — Jacobien polaire, à reproduire]
+Schema haut : dA/dr, rdθ — Jacobien polaire.
+
+![](assets/jacobien-polaire.png)
 
 Le changement de variable devant conserver les propriétés initiales, ona dA = dA' [bleu + rouge]
 
@@ -2498,7 +2506,9 @@ Ps Une autre approche géométrique consisterait à construire dans l'espace la 
 
 ## Page 123 (fin cylindres + * Aₙ = ? long chemin 14/03/2021)
 
-[schemas : cylindre creux rayon r hauteur e^{-r²}, déroulé 2πr — à reproduire]
+Schemas : cylindre creux rayon r hauteur e^{-r²}, déroulé 2πr.
+
+![](assets/cylindre-deroule.png)
 
 ainsi, I² = -π [e^{-r²}]₀^{+∞} = π [bleu]
 
@@ -2506,7 +2516,9 @@ Donc ∫_{-∞}^{+∞} e^{-x²} dx = √π [rouge + bleu]
 
 * Aₙ = ? (long chemin) [rouge, souligné] 14/03/2021 [bleu — date]
 
-[schema triangle ABC, point intérieur, sous-aires A₁ A₂ A₃ A₄, longueurs m y x' t z b' d c — à reproduire]
+Schema triangle ABC, point intérieur, sous-aires A₁ A₂ A₃ A₄, longueurs m y x' t z b' d c.
+
+![](assets/triangle-sous-aires.png)
 
 Ona : A₁ = A_T - A₂ - A₃ - A₄ [bleu]
 
@@ -2610,7 +2622,9 @@ S₅₀₀ = 250 [rouge]
 
 * Relation aire-longueur [rouge, souligné]
 
-[schema triangle BB'C avec point A', hauteurs h₁ h₂ angle α — à reproduire]
+Figure (crayon) : triangle BB'C avec point A', hauteurs h₁ h₂ angle α. [À reproduire en passe FORME : `lab/scripts/reproduce_triangle_hauteurs.py` → `assets/triangle-hauteurs.png`.]
+
+![](assets/triangle-hauteurs.png)
 
 Ona : A₁ = A'B×B'A' sin α / 2 [bleu]
 
@@ -2816,11 +2830,17 @@ Soient 2 montants de longueur H fixés perpendiculairement à la surface terrest
 
 repère orthonormé (O,i⃗,j⃗) où O est le pt le plus bas de la corde et i⃗ est défini comme vecteur unitaire normal aux droites supports des 2 montants, représente ce suit : [bleu — haut]
 
-[schema chaînette (C), hauteur H, sol — à reproduire]
+Figure (crayon) : chaînette (C), hauteur H, sol. [À reproduire en passe FORME : `lab/scripts/reproduce_chainette_sol.py` → `assets/chainette-sol.png`.]
+
+![](assets/chainette-sol.png)
 
 On découpe le plan d'étude en une infinité de rectangles verticaux de longueur infinie et de largeur dx→0 à partir de O dans le sens de i⃗ et de -i⃗. On suppose un morceau de corde quelconque compris dans l'un de ces rectangles [bleu]
 
-[schema bas : morceau T(x+dx), P(x), angle α, dx — à reproduire] On note les pts M(x,y) de (C) où -D/2 ≤ x ≤ D/2 et 0≤y≤H-h [bleu]
+Figure (crayon, bas) : morceau T(x+dx), P(x), angle α, dx. [À reproduire en passe FORME : `lab/scripts/reproduce_chainette_equilibre.py` → `assets/chainette-equilibre.png`.]
+
+![](assets/chainette-equilibre.png)
+
+On note les pts M(x,y) de (C) où -D/2 ≤ x ≤ D/2 et 0≤y≤H-h [bleu]
 
 On notera T⃗(x) la force de tension dirigée vers le haut s'exerçant en M [bleu — suite p.137]
 
@@ -3052,13 +3072,19 @@ On démontre que Card(Γ) = ∞. En effet (Γ) est l'ens des triples (α,β,γ) 
 
 Un disque de rayon R tourne le long de la circonférence d'un autre de rayon R' de façon à balayer un angle α ca [tel quel] Indique la figure ci-dessous [bleu]
 
-[schema deux disques (D) (D') — à reproduire, suite p.152]
+Figure (crayon) : deux disques (D) (D'), suite p.152. [À reproduire en passe FORME : `lab/scripts/reproduce_deux_disques.py` → `assets/deux-disques.png`.]
+
+![](assets/deux-disques.png)
 
 ## Page 152 (disque nbre tours N = (1+R'/R)α/2π)
 
 on s'intéresse au nbre de tours n qu'a fait (D) Pour cela on assimilera (D) et (D') à polygones réguliers inscrits dans (D) et (D') resp de côté dl→0 commun [bleu — haut]
 
-[schema polygones dl dθ dθ' — à reproduire] (D) dθ → dθ [bleu]
+Figure (crayon) : polygones dl dθ dθ'. [À reproduire en passe FORME : `lab/scripts/reproduce_polygones_roulement.py` → `assets/polygones-roulement.png`.]
+
+![](assets/polygones-roulement.png)
+
+(D) dθ → dθ [bleu]
 
 Ona : dl = R dθ = R' dθ' [bleu]
 
@@ -4960,21 +4986,32 @@ de façon générale {f'' = a f'/√(g'²+g'²)+b, g'' = c g'/√(g'²+g'²)+b' 
 
 ## Figures
 
-> Inventaire passe FORME : 11 figures reproduites (`lab/scripts/reproduce_*.py` → `assets/*.png`), embeds in-place + galerie ci-dessous.
+> Inventaire passe FORME : 22 figures reproduites (`lab/scripts/reproduce_*.py` → `assets/*.png`), embeds in-place + galerie ci-dessous.
 
 - Page 49 — Figure (crayon) : cercle, axe M horizontal, point avec angle θ, ω, v annotés. ![](assets/acceleration-rotation.png)
 - Page 23 — Figure (crayon) : cercle de centre O, diamètre M₂–M₀, point M₁ sur le cercle, angle α en M₂, angle θ au centre O (cas 2). ![](assets/angles-inscrits.png)
 - Page 20 — Figure (crayon) : cercle, diamètre horizontal BD [B à gauche, D à droite], point A en haut relié à D, point C en bas, AC coupant BD en E (angle droit), F, M, y. ![](assets/cordes-cercle1.png)
 - Page 27 — Figure (crayon) : cercle de centre O, cordes (M₃, M', M₂, M₁, M₀), angles α, α', α'', θ. ![](assets/cordes-cercle2.png)
+- Page 123 — Schemas : cylindre creux rayon r hauteur e^{-r²}, déroulé 2πr. ![](assets/cylindre-deroule.png)
 - Page 3 — Figure : même hexagone inscrit (crayon gris) annoté r, h, α. ![](assets/hexagone-cercle.png)
+- Page 120 — Schema haut : dA/dr, rdθ — Jacobien polaire. ![](assets/jacobien-polaire.png)
+- Page 119 — Schema axes (x, y), rectangle dx×dy + Jacobien dA/dx. ![](assets/jacobien-rectangle.png)
 - Page 14 — Figure (crayon) : lentille mince convergente (flèche verticale en O), axe optique horizontal, objet AB en A, image A'B' renversée. ![](assets/lentille-conjugaison.png)
 - Page 50 — Figure (crayon) : carré ABCD avec diagonale AC, droites (Δ₁), (Δ₂), point A, angle π/4. ![](assets/probleme1-carre.png)
 - Page 51 — Figure (crayon) : deux droites sécantes (Δ₁), (Δ₂), cercles tangents O₁, O', O'', point A. ![](assets/probleme2-cercle.png)
 - Page 53 — Figure (crayon) : quadrilatère ABCD avec diagonales, point E sur diagonale. ![](assets/ptolemee.png)
 - Page 25 — Figure (crayon) : quadrilatère M₃–M₂–M₁–M₀ inscrit dans un cercle de centre O, diagonales tracées. ![](assets/quadrilatere-convexe.png)
 - Page 35 — Figure (crayon) : cylindre (C) (spires + silhouette) et prisme (T) à base polygonale (zigzag), longueur l. ![](assets/ressort-spire.png)
+- Page 123 — Schema triangle ABC, point intérieur, sous-aires A₁ A₂ A₃ A₄, longueurs m y x' t z b' d c. ![](assets/triangle-sous-aires.png)
+- Page 106 — Figure (crayon) : cercle, point M, vecteurs vitesse V, accélération a, base (t, n), angle θ. ![](assets/cercle-frenet.png)
+- Page 107 — Figure (crayon, en haut) : pendule, angles θ, tensions T, poids P. ![](assets/pendule.png)
+- Page 128 — Figure (crayon) : triangle BB'C avec point A', hauteurs h₁ h₂ angle α. ![](assets/triangle-hauteurs.png)
+- Page 136 — Figure (crayon) : chaînette (C), hauteur H, sol. ![](assets/chainette-sol.png)
+- Page 136 — Figure (crayon, bas) : morceau T(x+dx), P(x), angle α, dx. ![](assets/chainette-equilibre.png)
+- Page 151 — Figure (crayon) : deux disques (D) (D'), suite p.152. ![](assets/deux-disques.png)
+- Page 152 — Figure (crayon) : polygones dl dθ dθ'. ![](assets/polygones-roulement.png)
 
-> Total : 11 mention(s) `assets/`, 11 fichier(s) unique(s), 22 embeds image effectifs (11 in-place + 11 galerie).
+> Total : 22 mention(s) `assets/`, 22 fichier(s) unique(s), 44 embeds image effectifs (22 in-place + 22 galerie).
 
 ## Vocabulaire
 

@@ -2,7 +2,7 @@
 
 > 🧾 **Manuscrit original :** `gln-hyperplan.pdf` (scan, 2 pages) · ✍️ KpihX
 > 🔍 **Statut :** lisible à 100 %, transcrit mot à mot. Les maths sont conservées telles quelles ;
-> seules les coquilles d'orthographe évidentes sont corrigées (signalées). Les schémas matriciels de la page 2 sont décrits fidèlement (à reproduire en FORME via `lab/scripts/`).
+> seules les coquilles d'orthographe évidentes sont corrigées (signalées). Les schémas matriciels de la page 2 sont décrits fidèlement (reproduits en FORME via `lab/scripts/`, voir ## Figures — COUVERT, rien à créer).
 > 📄 **Source scannée :** [`gln-hyperplan.pdf`](gln-hyperplan.pdf) (restaurée depuis `/run/media/kpihx/KpihX-Datas1/Travaux/Documents/PDF/Rencontre_GLn(IK)_Hyperplan.pdf`, vérifiée `pdfinfo`, 2026-09-07)
 
 ---
