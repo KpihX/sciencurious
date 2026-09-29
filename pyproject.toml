@@ -9,10 +9,61 @@ authors = [
 requires-python = ">=3.12"
 dependencies = [
     "edge-tts>=7.2.8",
-    "jupyter>=1.1.1",
+    "ipykernel>=7.4.0",
     "manim>=0.21.0",
     "matplotlib>=3.10.8",
     "numpy>=2.4.4",
     "scipy>=1.17.1",
-    "tiktoken>=0.12.0",
+]
+
+[project.optional-dependencies]
+cpu = [
+    "torch",
+    "torchvision"
+]
+
+cuda = [
+    "torch",
+    "torchvision"
+]
+
+xpu = [
+    "torch",
+    "torchvision",
+]
+
+[tool.uv]
+package = false
+index-strategy = "unsafe-best-match"
+prerelease = "allow"
+conflicts = [
+    [
+        { extra = "cpu" },
+        { extra = "cuda" },
+        { extra = "xpu" },
+    ],
+]
+
+[[tool.uv.index]]
+name = "pytorch-cpu"
+url = "https://download.pytorch.org/whl/cpu"
+
+[[tool.uv.index]]
+name = "pytorch-xpu"
+url = "https://download.pytorch.org/whl/xpu"
+
+[[tool.uv.index]]
+name = "pytorch-cuda"
+url = "https://download.pytorch.org/whl/cu126"
+
+[tool.uv.sources]
+torch = [
+    { index = "pytorch-cpu", extra = "cpu" },
+    { index = "pytorch-xpu", extra = "xpu" },
+    { index = "pytorch-cuda", extra = "cuda" },
+]
+torchvision = [
+    { index = "pytorch-cpu", extra = "cpu" },
+    { index = "pytorch-xpu", extra = "xpu" },
+    { index = "pytorch-cuda", extra = "cuda" },
 ]
